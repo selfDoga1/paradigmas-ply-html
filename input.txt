@@ -1,10 +1,32 @@
 CRIAR TELA 1200 X 1200
 
-ABRIR CONTAINER "container_1" 300 X 300
-    ADICIONAR TEXTO "Douglas Costa"
-    COLORIR TEXTO "Douglas Costa" PARA "preto"
+
+ABRIR CONTAINER "container_1" 600 X 600
+
+    ADICIONAR CABECALHO COM TEXTO "FORMULARIO"
+
+    ABRIR CONTAINER "form" 300 X 300
+        ADICIONAR TEXTO "Digite seus dados"
+        ADICIONAR ENTRADA TIPO "texto" COM ROTULO "Nome completo"
+        ADICIONAR ENTRADA TIPO "data" COM ROTULO "Data de nascimento"
+        ADICIONAR ENTRADA TIPO "senha" COM ROTULO "Senha"
+
+        ABRIR CONTAINER "form_botao" 30 X 290
+            ADICIONAR BOTAO COM ROTULO "Enviar"
+        FECHAR CONTAINER
+
+    FECHAR CONTAINER
 FECHAR CONTAINER
 
+COLORIR "container_1" PARA "lima"
 ALINHAR ITEMS CONTAINER "container_1" "centro"
 JUSTIFICAR ITEMS CONTAINER "container_1" "centro"
-COLORIR CONTAINER "container_1" PARA "cinza"
+ORGANIZAR CONTAINER "container_1" "verticalmente"
+
+ORGANIZAR CONTAINER "form" "verticalmente"
+APLICAR SOMBRA "agressiva" NO "form"
+COLORIR "form" PARA "cinza"
+ARRENDONDAR CONTAINER "form" "moderadamente"
+ALINHAR ITEMS CONTAINER "form" "centro"
+
+JUSTIFICAR ITEMS CONTAINER "form_botao" "final"

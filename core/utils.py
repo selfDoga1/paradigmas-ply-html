@@ -52,3 +52,45 @@ cores = {
     'magenta': '#FFB3FF'          # Magenta suave
 }
 
+entradas = {
+    'texto': 'text',               # Campo de texto padrão
+    'senha': 'password',           # Campo para senhas (caracteres mascarados)
+    'email': 'email',              # Campo para endereços de e-mail (validação incluída)
+    'numero': 'number',            # Campo para números (com controles de incremento/decremento)
+    'telefone': 'tel',             # Campo para números de telefone
+    'url': 'url',                  # Campo para URLs (validação incluída)
+    'data': 'date',                # Campo para seleção de data (com calendário)
+    'hora': 'time',                # Campo para seleção de hora
+    'busca': 'search',             # Campo para buscas (estilizado para pesquisas)
+    'arquivo': 'file',             # Campo para upload de arquivos
+    'checkbox': 'checkbox',        # Caixa de seleção (marcar/desmarcar)
+    'radio': 'radio',              # Botão de seleção (escolha única em grupo)
+    'cor': 'color',                # Seleção de cor (aparece uma paleta)
+    'intervalo': 'range',          # Controle deslizante para intervalos de valores
+    'oculto': 'hidden',            # Campo oculto (não visível, mas enviado com o formulário)
+    'submit': 'submit',            # Botão para enviar o formulário
+    'reset': 'reset',              # Botão para resetar os campos do formulário
+    'imagem': 'image',             # Botão de envio com imagem
+    'botao': 'button',              # Botão genérico (não envia formulário)
+}
+
+direcoes_config = {
+    'verticalmente': 'column',
+    'horizontalmente': 'row',
+}
+
+sombras_config = {
+    "leve": "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    "moderada": "0px 4px 8px rgba(0, 0, 0, 0.15)",
+    "agressiva": "0px 6px 12px rgba(0, 0, 0, 0.25)"
+}
+
+arredondar_config = {
+    "levemente": "4px",
+    "moderadamente": "8px",
+    "agressivamente": "16px"
+}
+
+
+
+

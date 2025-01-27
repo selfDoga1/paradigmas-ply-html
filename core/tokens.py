@@ -15,6 +15,20 @@ tokens = (
     'ALINHAR',
     'ITEMS',
     'JUSTIFICAR',
+    'ENTRADA',
+    'TIPO',
+    'COM',
+    'ROTULO',
+    'ORGANIZAR',
+    'APLICAR',
+    'SOMBRA',
+    'NO',
+    'ARRENDONDAR',
+    'BOTAO',
+    'E',
+    'COR',
+    'CABECALHO',
+
 )
 
 t_ignore = ' \t'
@@ -34,6 +48,19 @@ t_PARA              = r'PARA'
 t_ALINHAR           = r'ALINHAR'
 t_ITEMS             = r'ITEMS'
 t_JUSTIFICAR        = r'JUSTIFICAR'
+t_ENTRADA           = r'ENTRADA'
+t_TIPO              = r'TIPO'
+t_COM               = r'COM'
+t_ROTULO            = r'ROTULO'
+t_ORGANIZAR         = r'ORGANIZAR'
+t_APLICAR           = r'APLICAR'
+t_NO                = r'NO'
+t_SOMBRA            = r'SOMBRA'
+t_ARRENDONDAR       = r'ARRENDONDAR'
+t_BOTAO             = r'BOTAO'
+t_E                 = r'E'
+t_COR               = r'COR'
+t_CABECALHO         = r'CABECALHO'
 
 
 def t_NUMERO(t):

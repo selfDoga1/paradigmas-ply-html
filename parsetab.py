@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'ABRIR ADICIONAR ALINHAR COLORIR CONTAINER CRIAR FECHAR ITEMS JUSTIFICAR NUMERO PARA STRING TAMANHO TELA TEXTO X comandos : comando\n                | comandos comando  comando : CRIAR TELA NUMERO X NUMERO comando : ADICIONAR TEXTO STRING comando : COLORIR TEXTO STRING PARA STRING  comando : ABRIR CONTAINER STRING NUMERO X NUMERO comando : FECHAR CONTAINER  comando : ALINHAR ITEMS CONTAINER STRING STRING  comando : JUSTIFICAR ITEMS CONTAINER STRING STRING comando : COLORIR CONTAINER STRING PARA STRING '
+_lr_signature = 'ABRIR ADICIONAR ALINHAR APLICAR ARRENDONDAR BOTAO CABECALHO COLORIR COM CONTAINER COR CRIAR E ENTRADA FECHAR ITEMS JUSTIFICAR NO NUMERO ORGANIZAR PARA ROTULO SOMBRA STRING TAMANHO TELA TEXTO TIPO X comandos : comando\n                | comandos comando  comando : CRIAR TELA NUMERO X NUMERO comando : ADICIONAR TEXTO STRING comando : COLORIR TEXTO STRING PARA STRING  comando : ADICIONAR CABECALHO COM TEXTO STRING  comando : ABRIR CONTAINER STRING NUMERO X NUMERO comando : FECHAR CONTAINER  comando : ALINHAR ITEMS CONTAINER STRING STRING  comando : JUSTIFICAR ITEMS CONTAINER STRING STRING  comando : ORGANIZAR CONTAINER STRING STRING  comando : ARRENDONDAR CONTAINER STRING STRING  comando : ADICIONAR BOTAO COM ROTULO STRING comando : ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING  comando : APLICAR SOMBRA STRING NO STRING comando : COLORIR STRING PARA STRING '
     
-_lr_action_items = {'CRIAR':([0,1,2,10,16,20,32,33,34,36,37,38,],[3,3,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'ADICIONAR':([0,1,2,10,16,20,32,33,34,36,37,38,],[4,4,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'COLORIR':([0,1,2,10,16,20,32,33,34,36,37,38,],[5,5,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'ABRIR':([0,1,2,10,16,20,32,33,34,36,37,38,],[6,6,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'FECHAR':([0,1,2,10,16,20,32,33,34,36,37,38,],[7,7,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'ALINHAR':([0,1,2,10,16,20,32,33,34,36,37,38,],[8,8,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'JUSTIFICAR':([0,1,2,10,16,20,32,33,34,36,37,38,],[9,9,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'$end':([1,2,10,16,20,32,33,34,36,37,38,],[0,-1,-2,-7,-4,-3,-5,-10,-8,-9,-6,]),'TELA':([3,],[11,]),'TEXTO':([4,5,],[12,13,]),'CONTAINER':([5,6,7,17,18,],[14,15,16,24,25,]),'ITEMS':([8,9,],[17,18,]),'NUMERO':([11,23,26,35,],[19,29,32,38,]),'STRING':([12,13,14,15,24,25,27,28,30,31,],[20,21,22,23,30,31,33,34,36,37,]),'X':([19,29,],[26,35,]),'PARA':([21,22,],[27,28,]),}
+_lr_action_items = {'CRIAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[3,3,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'ADICIONAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[4,4,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'COLORIR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[5,5,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'ABRIR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[6,6,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'FECHAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[7,7,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'ALINHAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[8,8,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'JUSTIFICAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[9,9,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'ORGANIZAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[10,10,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'ARRENDONDAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[11,11,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'APLICAR':([0,1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[12,12,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'$end':([1,2,13,22,29,46,50,51,53,54,55,57,59,60,61,63,64,],[0,-1,-2,-8,-4,-16,-11,-12,-3,-6,-13,-5,-9,-10,-15,-7,-14,]),'TELA':([3,],[14,]),'TEXTO':([4,5,30,],[15,19,42,]),'CABECALHO':([4,],[16,]),'BOTAO':([4,],[17,]),'ENTRADA':([4,],[18,]),'STRING':([5,15,19,21,25,26,27,32,34,36,37,38,39,42,43,45,48,49,52,62,],[20,29,33,35,38,39,40,44,46,48,49,50,51,54,55,57,59,60,61,64,]),'CONTAINER':([6,7,10,11,23,24,],[21,22,25,26,36,37,]),'ITEMS':([8,9,],[23,24,]),'SOMBRA':([12,],[27,]),'NUMERO':([14,35,41,58,],[28,47,53,63,]),'COM':([16,17,44,],[30,31,56,]),'TIPO':([18,],[32,]),'PARA':([20,33,],[34,45,]),'X':([28,47,],[41,58,]),'ROTULO':([31,56,],[43,62,]),'NO':([40,],[52,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'comandos':([0,],[1,]),'comando':([0,1,],[2,10,]),}
+_lr_goto_items = {'comandos':([0,],[1,]),'comando':([0,1,],[2,13,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -32,9 +32,15 @@ _lr_productions = [
   ('comando -> CRIAR TELA NUMERO X NUMERO','comando',5,'p_comando_tela','comandos.py',14),
   ('comando -> ADICIONAR TEXTO STRING','comando',3,'p_comando_texto','comandos.py',24),
   ('comando -> COLORIR TEXTO STRING PARA STRING','comando',5,'p_comando_colorir_texto','comandos.py',32),
-  ('comando -> ABRIR CONTAINER STRING NUMERO X NUMERO','comando',6,'p_comando_abrir_container','comandos.py',43),
-  ('comando -> FECHAR CONTAINER','comando',2,'p_comando_fechar_container','comandos.py',52),
-  ('comando -> ALINHAR ITEMS CONTAINER STRING STRING','comando',5,'p_alinhar_items_container','comandos.py',57),
-  ('comando -> JUSTIFICAR ITEMS CONTAINER STRING STRING','comando',5,'p_justificar_items_container','comandos.py',68),
-  ('comando -> COLORIR CONTAINER STRING PARA STRING','comando',5,'p_comando_colorir_container','comandos.py',78),
+  ('comando -> ADICIONAR CABECALHO COM TEXTO STRING','comando',5,'p_adicionar_cabecalho','comandos.py',40),
+  ('comando -> ABRIR CONTAINER STRING NUMERO X NUMERO','comando',6,'p_comando_abrir_container','comandos.py',50),
+  ('comando -> FECHAR CONTAINER','comando',2,'p_comando_fechar_container','comandos.py',59),
+  ('comando -> ALINHAR ITEMS CONTAINER STRING STRING','comando',5,'p_alinhar_items_container','comandos.py',64),
+  ('comando -> JUSTIFICAR ITEMS CONTAINER STRING STRING','comando',5,'p_justificar_items_container','comandos.py',75),
+  ('comando -> ORGANIZAR CONTAINER STRING STRING','comando',4,'p_organizar_container','comandos.py',86),
+  ('comando -> ARRENDONDAR CONTAINER STRING STRING','comando',4,'p_arredondar_container','comandos.py',94),
+  ('comando -> ADICIONAR BOTAO COM ROTULO STRING','comando',5,'p_comando_adicionar_botao','comandos.py',103),
+  ('comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING','comando',7,'p_comando_adicionar_entrada','comandos.py',115),
+  ('comando -> APLICAR SOMBRA STRING NO STRING','comando',5,'p_aplicar_sombra','comandos.py',131),
+  ('comando -> COLORIR STRING PARA STRING','comando',4,'p_comando_colorir','comandos.py',139),
 ]
