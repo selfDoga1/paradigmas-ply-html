@@ -1,0 +1,5 @@
+tela 600 400
+cabecalho "Bem-Vindo" grande centralizado
+botao "Clique Aqui" 100 50
+imagem "foto.jpg" 200 150
+texto "Exemplo de texto" pequeno esquerdo

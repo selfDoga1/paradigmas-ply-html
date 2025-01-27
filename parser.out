@@ -1,0 +1,252 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> comandos
+Rule 1     comandos -> comando
+Rule 2     comandos -> comandos comando
+Rule 3     comando -> TELA NUMERO NUMERO
+Rule 4     comando -> CABECALHO STRING TAMANHO ALINHAMENTO
+Rule 5     comando -> BOTAO STRING NUMERO NUMERO
+Rule 6     comando -> IMAGEM STRING NUMERO NUMERO
+Rule 7     comando -> TEXTO STRING TAMANHO ALINHAMENTO
+
+Terminals, with rules where they appear
+
+ALINHAMENTO          : 4 7
+BOTAO                : 5
+CABECALHO            : 4
+IMAGEM               : 6
+NUMERO               : 3 3 5 5 6 6
+STRING               : 4 5 6 7
+TAMANHO              : 4 7
+TELA                 : 3
+TEXTO                : 7
+error                : 
+
+Nonterminals, with rules where they appear
+
+comando              : 1 2
+comandos             : 2 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . comandos
+    (1) comandos -> . comando
+    (2) comandos -> . comandos comando
+    (3) comando -> . TELA NUMERO NUMERO
+    (4) comando -> . CABECALHO STRING TAMANHO ALINHAMENTO
+    (5) comando -> . BOTAO STRING NUMERO NUMERO
+    (6) comando -> . IMAGEM STRING NUMERO NUMERO
+    (7) comando -> . TEXTO STRING TAMANHO ALINHAMENTO
+
+    TELA            shift and go to state 3
+    CABECALHO       shift and go to state 4
+    BOTAO           shift and go to state 5
+    IMAGEM          shift and go to state 6
+    TEXTO           shift and go to state 7
+
+    comandos                       shift and go to state 1
+    comando                        shift and go to state 2
+
+state 1
+
+    (0) S' -> comandos .
+    (2) comandos -> comandos . comando
+    (3) comando -> . TELA NUMERO NUMERO
+    (4) comando -> . CABECALHO STRING TAMANHO ALINHAMENTO
+    (5) comando -> . BOTAO STRING NUMERO NUMERO
+    (6) comando -> . IMAGEM STRING NUMERO NUMERO
+    (7) comando -> . TEXTO STRING TAMANHO ALINHAMENTO
+
+    TELA            shift and go to state 3
+    CABECALHO       shift and go to state 4
+    BOTAO           shift and go to state 5
+    IMAGEM          shift and go to state 6
+    TEXTO           shift and go to state 7
+
+    comando                        shift and go to state 8
+
+state 2
+
+    (1) comandos -> comando .
+
+    TELA            reduce using rule 1 (comandos -> comando .)
+    CABECALHO       reduce using rule 1 (comandos -> comando .)
+    BOTAO           reduce using rule 1 (comandos -> comando .)
+    IMAGEM          reduce using rule 1 (comandos -> comando .)
+    TEXTO           reduce using rule 1 (comandos -> comando .)
+    $end            reduce using rule 1 (comandos -> comando .)
+
+
+state 3
+
+    (3) comando -> TELA . NUMERO NUMERO
+
+    NUMERO          shift and go to state 9
+
+
+state 4
+
+    (4) comando -> CABECALHO . STRING TAMANHO ALINHAMENTO
+
+    STRING          shift and go to state 10
+
+
+state 5
+
+    (5) comando -> BOTAO . STRING NUMERO NUMERO
+
+    STRING          shift and go to state 11
+
+
+state 6
+
+    (6) comando -> IMAGEM . STRING NUMERO NUMERO
+
+    STRING          shift and go to state 12
+
+
+state 7
+
+    (7) comando -> TEXTO . STRING TAMANHO ALINHAMENTO
+
+    STRING          shift and go to state 13
+
+
+state 8
+
+    (2) comandos -> comandos comando .
+
+    TELA            reduce using rule 2 (comandos -> comandos comando .)
+    CABECALHO       reduce using rule 2 (comandos -> comandos comando .)
+    BOTAO           reduce using rule 2 (comandos -> comandos comando .)
+    IMAGEM          reduce using rule 2 (comandos -> comandos comando .)
+    TEXTO           reduce using rule 2 (comandos -> comandos comando .)
+    $end            reduce using rule 2 (comandos -> comandos comando .)
+
+
+state 9
+
+    (3) comando -> TELA NUMERO . NUMERO
+
+    NUMERO          shift and go to state 14
+
+
+state 10
+
+    (4) comando -> CABECALHO STRING . TAMANHO ALINHAMENTO
+
+    TAMANHO         shift and go to state 15
+
+
+state 11
+
+    (5) comando -> BOTAO STRING . NUMERO NUMERO
+
+    NUMERO          shift and go to state 16
+
+
+state 12
+
+    (6) comando -> IMAGEM STRING . NUMERO NUMERO
+
+    NUMERO          shift and go to state 17
+
+
+state 13
+
+    (7) comando -> TEXTO STRING . TAMANHO ALINHAMENTO
+
+    TAMANHO         shift and go to state 18
+
+
+state 14
+
+    (3) comando -> TELA NUMERO NUMERO .
+
+    TELA            reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+    CABECALHO       reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+    BOTAO           reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+    IMAGEM          reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+    TEXTO           reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+    $end            reduce using rule 3 (comando -> TELA NUMERO NUMERO .)
+
+
+state 15
+
+    (4) comando -> CABECALHO STRING TAMANHO . ALINHAMENTO
+
+    ALINHAMENTO     shift and go to state 19
+
+
+state 16
+
+    (5) comando -> BOTAO STRING NUMERO . NUMERO
+
+    NUMERO          shift and go to state 20
+
+
+state 17
+
+    (6) comando -> IMAGEM STRING NUMERO . NUMERO
+
+    NUMERO          shift and go to state 21
+
+
+state 18
+
+    (7) comando -> TEXTO STRING TAMANHO . ALINHAMENTO
+
+    ALINHAMENTO     shift and go to state 22
+
+
+state 19
+
+    (4) comando -> CABECALHO STRING TAMANHO ALINHAMENTO .
+
+    TELA            reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+    CABECALHO       reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+    BOTAO           reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+    IMAGEM          reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+    TEXTO           reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+    $end            reduce using rule 4 (comando -> CABECALHO STRING TAMANHO ALINHAMENTO .)
+
+
+state 20
+
+    (5) comando -> BOTAO STRING NUMERO NUMERO .
+
+    TELA            reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+    CABECALHO       reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+    BOTAO           reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+    IMAGEM          reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+    TEXTO           reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+    $end            reduce using rule 5 (comando -> BOTAO STRING NUMERO NUMERO .)
+
+
+state 21
+
+    (6) comando -> IMAGEM STRING NUMERO NUMERO .
+
+    TELA            reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+    CABECALHO       reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+    BOTAO           reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+    IMAGEM          reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+    TEXTO           reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+    $end            reduce using rule 6 (comando -> IMAGEM STRING NUMERO NUMERO .)
+
+
+state 22
+
+    (7) comando -> TEXTO STRING TAMANHO ALINHAMENTO .
+
+    TELA            reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+    CABECALHO       reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+    BOTAO           reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+    IMAGEM          reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+    TEXTO           reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+    $end            reduce using rule 7 (comando -> TEXTO STRING TAMANHO ALINHAMENTO .)
+
