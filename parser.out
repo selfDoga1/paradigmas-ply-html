@@ -1,0 +1,245 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    TAMANHO
+
+Grammar
+
+Rule 0     S' -> comandos
+Rule 1     comandos -> comando
+Rule 2     comandos -> comandos comando
+Rule 3     comando -> CRIAR TELA NUMERO X NUMERO
+Rule 4     comando -> ADICIONAR TEXTO STRING
+Rule 5     comando -> COLORIR TEXTO STRING PARA STRING
+Rule 6     comando -> CRIAR CONTAINER NUMERO X NUMERO
+Rule 7     comando -> FECHAR_CONTAINER
+
+Terminals, with rules where they appear
+
+ADICIONAR            : 4
+COLORIR              : 5
+CONTAINER            : 6
+CRIAR                : 3 6
+FECHAR_CONTAINER     : 7
+NUMERO               : 3 3 6 6
+PARA                 : 5
+STRING               : 4 5 5
+TAMANHO              : 
+TELA                 : 3
+TEXTO                : 4 5
+X                    : 3 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+comando              : 1 2
+comandos             : 2 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . comandos
+    (1) comandos -> . comando
+    (2) comandos -> . comandos comando
+    (3) comando -> . CRIAR TELA NUMERO X NUMERO
+    (4) comando -> . ADICIONAR TEXTO STRING
+    (5) comando -> . COLORIR TEXTO STRING PARA STRING
+    (6) comando -> . CRIAR CONTAINER NUMERO X NUMERO
+    (7) comando -> . FECHAR_CONTAINER
+
+    CRIAR           shift and go to state 3
+    ADICIONAR       shift and go to state 4
+    COLORIR         shift and go to state 5
+    FECHAR_CONTAINER shift and go to state 6
+
+    comandos                       shift and go to state 1
+    comando                        shift and go to state 2
+
+state 1
+
+    (0) S' -> comandos .
+    (2) comandos -> comandos . comando
+    (3) comando -> . CRIAR TELA NUMERO X NUMERO
+    (4) comando -> . ADICIONAR TEXTO STRING
+    (5) comando -> . COLORIR TEXTO STRING PARA STRING
+    (6) comando -> . CRIAR CONTAINER NUMERO X NUMERO
+    (7) comando -> . FECHAR_CONTAINER
+
+    CRIAR           shift and go to state 3
+    ADICIONAR       shift and go to state 4
+    COLORIR         shift and go to state 5
+    FECHAR_CONTAINER shift and go to state 6
+
+    comando                        shift and go to state 7
+
+state 2
+
+    (1) comandos -> comando .
+
+    CRIAR           reduce using rule 1 (comandos -> comando .)
+    ADICIONAR       reduce using rule 1 (comandos -> comando .)
+    COLORIR         reduce using rule 1 (comandos -> comando .)
+    FECHAR_CONTAINER reduce using rule 1 (comandos -> comando .)
+    $end            reduce using rule 1 (comandos -> comando .)
+
+
+state 3
+
+    (3) comando -> CRIAR . TELA NUMERO X NUMERO
+    (6) comando -> CRIAR . CONTAINER NUMERO X NUMERO
+
+    TELA            shift and go to state 8
+    CONTAINER       shift and go to state 9
+
+
+state 4
+
+    (4) comando -> ADICIONAR . TEXTO STRING
+
+    TEXTO           shift and go to state 10
+
+
+state 5
+
+    (5) comando -> COLORIR . TEXTO STRING PARA STRING
+
+    TEXTO           shift and go to state 11
+
+
+state 6
+
+    (7) comando -> FECHAR_CONTAINER .
+
+    CRIAR           reduce using rule 7 (comando -> FECHAR_CONTAINER .)
+    ADICIONAR       reduce using rule 7 (comando -> FECHAR_CONTAINER .)
+    COLORIR         reduce using rule 7 (comando -> FECHAR_CONTAINER .)
+    FECHAR_CONTAINER reduce using rule 7 (comando -> FECHAR_CONTAINER .)
+    $end            reduce using rule 7 (comando -> FECHAR_CONTAINER .)
+
+
+state 7
+
+    (2) comandos -> comandos comando .
+
+    CRIAR           reduce using rule 2 (comandos -> comandos comando .)
+    ADICIONAR       reduce using rule 2 (comandos -> comandos comando .)
+    COLORIR         reduce using rule 2 (comandos -> comandos comando .)
+    FECHAR_CONTAINER reduce using rule 2 (comandos -> comandos comando .)
+    $end            reduce using rule 2 (comandos -> comandos comando .)
+
+
+state 8
+
+    (3) comando -> CRIAR TELA . NUMERO X NUMERO
+
+    NUMERO          shift and go to state 12
+
+
+state 9
+
+    (6) comando -> CRIAR CONTAINER . NUMERO X NUMERO
+
+    NUMERO          shift and go to state 13
+
+
+state 10
+
+    (4) comando -> ADICIONAR TEXTO . STRING
+
+    STRING          shift and go to state 14
+
+
+state 11
+
+    (5) comando -> COLORIR TEXTO . STRING PARA STRING
+
+    STRING          shift and go to state 15
+
+
+state 12
+
+    (3) comando -> CRIAR TELA NUMERO . X NUMERO
+
+    X               shift and go to state 16
+
+
+state 13
+
+    (6) comando -> CRIAR CONTAINER NUMERO . X NUMERO
+
+    X               shift and go to state 17
+
+
+state 14
+
+    (4) comando -> ADICIONAR TEXTO STRING .
+
+    CRIAR           reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+    ADICIONAR       reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+    COLORIR         reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+    FECHAR_CONTAINER reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+    $end            reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+
+
+state 15
+
+    (5) comando -> COLORIR TEXTO STRING . PARA STRING
+
+    PARA            shift and go to state 18
+
+
+state 16
+
+    (3) comando -> CRIAR TELA NUMERO X . NUMERO
+
+    NUMERO          shift and go to state 19
+
+
+state 17
+
+    (6) comando -> CRIAR CONTAINER NUMERO X . NUMERO
+
+    NUMERO          shift and go to state 20
+
+
+state 18
+
+    (5) comando -> COLORIR TEXTO STRING PARA . STRING
+
+    STRING          shift and go to state 21
+
+
+state 19
+
+    (3) comando -> CRIAR TELA NUMERO X NUMERO .
+
+    CRIAR           reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+    ADICIONAR       reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+    COLORIR         reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+    FECHAR_CONTAINER reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+    $end            reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+
+
+state 20
+
+    (6) comando -> CRIAR CONTAINER NUMERO X NUMERO .
+
+    CRIAR           reduce using rule 6 (comando -> CRIAR CONTAINER NUMERO X NUMERO .)
+    ADICIONAR       reduce using rule 6 (comando -> CRIAR CONTAINER NUMERO X NUMERO .)
+    COLORIR         reduce using rule 6 (comando -> CRIAR CONTAINER NUMERO X NUMERO .)
+    FECHAR_CONTAINER reduce using rule 6 (comando -> CRIAR CONTAINER NUMERO X NUMERO .)
+    $end            reduce using rule 6 (comando -> CRIAR CONTAINER NUMERO X NUMERO .)
+
+
+state 21
+
+    (5) comando -> COLORIR TEXTO STRING PARA STRING .
+
+    CRIAR           reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ADICIONAR       reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    COLORIR         reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    FECHAR_CONTAINER reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    $end            reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+

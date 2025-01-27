@@ -1,0 +1,125 @@
+1. Planejamento do Projeto
+
+Definir os objetivos principais do projeto.
+    Criar uma linguagem para descrever telas e gerar HTML/CSS.
+    Linguagem deve ser simples e intuitiva.
+
+Descrever os comandos e funcionalidades da linguagem.
+    Ex.: tela, cabecalho, botao, imagem, texto.
+
+Definir a estrutura de saída (HTML e CSS).
+    Ex.: Um arquivo output.html e outro style.css.
+
+==================================================================
+
+2. Ambiente de Desenvolvimento
+
+Instalar o Python (se necessário).
+Instalar o PLY.
+
+pip install ply
+
+Configurar o editor de código (VSCode, PyCharm, etc.).
+
+==================================================================
+
+3. Implementação do Analisador Léxico
+
+Identificar os tokens necessários.
+
+    Ex.: TELA, CABECALHO, BOTAO, IMAGEM, TEXTO, NUMERO, STRING, etc.
+
+Definir as expressões regulares para cada token.
+
+    Ex.: t_TELA = r'tela', t_STRING = r'\".*?\"', etc.
+
+Implementar o analisador léxico com PLY.
+Testar a análise léxica com exemplos simples.
+
+==================================================================
+
+4. Implementação do Analisador Sintático
+
+Definir a gramática da linguagem.
+
+    Ex.:
+
+    comando : TELA NUMERO NUMERO
+            | CABECALHO STRING TAMANHO ALINHAMENTO
+            | BOTAO STRING NUMERO NUMERO
+
+Implementar as regras sintáticas no parser.
+Criar funções para processar cada comando e gerar o código correspondente.
+
+    Ex.: Função para criar tags <h1> para cabeçalhos, <button> para botões, etc.
+
+Tratar erros sintáticos para entradas inválidas.
+
+==================================================================
+
+5. Geração de Código (HTML e CSS)
+
+Criar uma estrutura para armazenar o código HTML e CSS gerado.
+
+    Ex.: Listas separadas para HTML e CSS.
+
+Converter os comandos da linguagem em elementos HTML/CSS.
+
+    Ex.:
+        tela 600 400 → <div style="width:600px; height:400px;"></div>.
+        cabecalho "Texto" grande centralizado → <h1 style="text-align:center; font-size:32px;">Texto</h1>.
+
+Gerar os arquivos de saída (output.html e style.css).
+
+==================================================================
+
+6. Testes
+
+Criar arquivos de entrada (input.txt) com exemplos variados.
+
+    Exemplo básico:
+        tela 600 400
+        cabecalho "Bem-Vindo" grande centralizado
+        botao "Clique Aqui" 100 50
+
+Testar a análise léxica e sintática para esses exemplos.
+Validar a saída (HTML e CSS) gerada.
+
+Abrir o arquivo HTML em um navegador para verificar o layout.
+
+Corrigir erros ou ajustar regras de gramática conforme necessário.
+
+==================================================================
+
+7. Documentação
+
+Criar um guia de uso da linguagem.
+    Sintaxe de comandos.
+    Exemplos de entrada e saída.
+
+Explicar a estrutura do código e como o projeto foi implementado.
+Adicionar comentários no código para facilitar a manutenção.
+
+==================================================================
+
+8. Funcionalidades Extras (Opcional)
+
+Adicionar suporte para cores em elementos.
+    Ex.: botao "Clique" 100 50 azul.
+
+Permitir hierarquia de elementos.
+    Ex.: Adicionar botões ou textos dentro de uma seção.
+
+Geração automática de IDs ou classes CSS.
+Exportar também um arquivo JSON descrevendo a estrutura da tela.
+
+==================================================================
+
+9. Finalização
+
+Revisar e testar o projeto com diferentes casos de uso.
+Empacotar o projeto para distribuição (se necessário).
+Preparar uma apresentação ou demonstração do projeto.
+
+==================================================================
+
