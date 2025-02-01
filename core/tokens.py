@@ -41,7 +41,6 @@ t_CONTAINER         = r'CONTAINER'
 t_FECHAR            = r'FECHAR'
 t_ABRIR             = r'ABRIR'
 t_TEXTO             = r'TEXTO'
-t_STRING            = r'\".*?\"'
 t_ADICIONAR         = r'ADICIONAR'
 t_COLORIR           = r'COLORIR'
 t_PARA              = r'PARA'
@@ -62,6 +61,10 @@ t_E                 = r'E'
 t_COR               = r'COR'
 t_CABECALHO         = r'CABECALHO'
 
+def t_STRING(t):
+    r'\".*?\"'
+    t.value = t.value[1:-1]  # remove as aspas
+    return t
 
 def t_NUMERO(t):
     r'\d+'
