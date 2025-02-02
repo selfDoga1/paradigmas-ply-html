@@ -1,3 +1,4 @@
+from .constants import *
 from .utils import *
 
 
@@ -42,6 +43,21 @@ def p_adicionar_cabecalho(p):
             <h1 id={convert_to_id(texto)}>{texto}</h1>
         '''.strip())
 
+def p_adicionar_cabecalho_secundario(p):
+    """ comando : ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING """
+
+    texto = p[6]
+    html_output.append(f'''
+        <h3 id={convert_to_id(texto)}>{texto}</h3>
+    '''.strip())
+
+def p_comando_adicionar_ajuda(p):
+    """ comando : ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING """
+    elemento_id = p[5]
+    tooltip_texto = p[8]
+    css_output.append(f"#{convert_to_id(elemento_id)}::after {{ content: '{tooltip_texto}'; position: absolute; visibility: hidden; background-color: black; color: white; padding: 5px; border-radius: 4px; }}")
+    css_output.append(f"#{convert_to_id(elemento_id)}:hover::after {{ visibility: visible; }}")
+
 # ================================== CONTAINER =====================================
 
 def p_comando_abrir_container(p):
@@ -56,8 +72,18 @@ def p_comando_fechar_container(p):
     """ comando : FECHAR CONTAINER """
     html_output.append("</div>")
 
+
+def p_comando_adicionar_imagem_fundo(p):
+    """ comando : ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING """
+
+    imagem_fundo = p[3]
+    container_id = p[8]
+    
+    css_output.append(f"#{convert_to_id(container_id)} {{ background-image: url('{imagem_fundo}'); background-size: cover; }}")
+
+
 def p_alinhar_items_container(p):
-    """ comando : ALINHAR ITEMS CONTAINER STRING STRING """
+    """ comando : ALINHAR ITENS CONTAINER STRING STRING """
 
     container_id, alinhamento = p[4], p[5]
 
@@ -67,7 +93,7 @@ def p_alinhar_items_container(p):
     css_output.append("#{id}{{align-items: {alinhamento}}}".format(id=container_id, alinhamento=alinhamento))
 
 def p_justificar_items_container(p):
-    """ comando : JUSTIFICAR ITEMS CONTAINER STRING STRING """
+    """ comando : JUSTIFICAR ITENS CONTAINER STRING STRING """
 
     container_id, alinhamento = p[4], p[5]
 
@@ -98,7 +124,7 @@ def p_comando_adicionar_botao(p):
     rotulo = rotulo
 
     html_output.append(f'''
-        <button>{rotulo}</button>        
+        <button id="{convert_to_id(rotulo)}">{rotulo}</button>        
     '''.strip())
 
 # ================================== FORM =====================================
@@ -133,6 +159,19 @@ def p_comando_colorir(p):
     cor = p[4]
     cor = cores.get(cor, cor)
     css_output.append("#{id}{{background-color: {cor}}}".format(id=container_id, cor=cor))
+
+def p_comando_criar_lista(p):
+    """ comando : CRIAR LISTA STRING COM ITENS LISTAGEM """
+    titulo = p[3]
+    items = p[6]
+    html_output.append(gerar_lista_html(titulo, items, tipo_lista="ul"))
+
+def p_comando_criar_lista_ordenada(p):
+    """ comando : CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM """
+    titulo = p[4]
+    items = p[7]
+    html_output.append(gerar_lista_html(titulo, items, tipo_lista="ol"))
+
 
 def p_error(p):
     print(f"Erro sintático: {p.value if p else 'final inesperado'}")

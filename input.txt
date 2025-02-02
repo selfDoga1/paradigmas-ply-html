@@ -1,32 +1,48 @@
-CRIAR TELA 1200 X 1200
+CRIAR TELA 1200 X 1400
 
+ABRIR CONTAINER "container_geral" 1000 X 1200
 
-ABRIR CONTAINER "container_1" 600 X 600
+    ABRIR CONTAINER "imagem" 400 X 400
+    FECHAR CONTAINER
+    ADICIONAR IMAGEM "https://tiflux.com/wp-content/uploads/2020/03/data-center-completo.png" COMO FUNDO NO CONTAINER "imagem"
 
-    ADICIONAR CABECALHO COM TEXTO "FORMULARIO"
+    ADICIONAR CABECALHO COM TEXTO "Cadastro de Usuário"
+    ADICIONAR CABECALHO SECUNDARIO COM TEXTO "Forneça todas as informações requeridas"
 
-    ABRIR CONTAINER "form" 300 X 300
-        ADICIONAR TEXTO "Digite seus dados"
+    ABRIR CONTAINER "formulario" 800 X 1000
+        ADICIONAR TEXTO "Preencha os campos abaixo para criar sua conta."
+
         ADICIONAR ENTRADA TIPO "texto" COM ROTULO "Nome completo"
+        ADICIONAR ENTRADA TIPO "email" COM ROTULO "Email"
+        ADICIONAR ENTRADA TIPO "telefone" COM ROTULO "Telefone"
         ADICIONAR ENTRADA TIPO "data" COM ROTULO "Data de nascimento"
+        
+        ADICIONAR TEXTO "Escolha uma senha segura"
         ADICIONAR ENTRADA TIPO "senha" COM ROTULO "Senha"
+        ADICIONAR ENTRADA TIPO "senha" COM ROTULO "Confirmar senha"
 
-        ABRIR CONTAINER "form_botao" 30 X 290
-            ADICIONAR BOTAO COM ROTULO "Enviar"
+        ADICIONAR TEXTO "Preferências de comunicação"
+        ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Receber novidades por e-mail"
+        ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Aceito os termos e condições"
+        
+        ABRIR CONTAINER "form_botao" 50 X 800
+            ADICIONAR BOTAO COM ROTULO "Cadastrar"
         FECHAR CONTAINER
 
     FECHAR CONTAINER
+
 FECHAR CONTAINER
 
-COLORIR "container_1" PARA "lima"
-ALINHAR ITEMS CONTAINER "container_1" "centro"
-JUSTIFICAR ITEMS CONTAINER "container_1" "centro"
-ORGANIZAR CONTAINER "container_1" "verticalmente"
+COLORIR "container_geral" PARA "azul"
+ALINHAR ITENS CONTAINER "container_geral" "centro"
+JUSTIFICAR ITENS CONTAINER "container_geral" "centro"
+ORGANIZAR CONTAINER "container_geral" "verticalmente"
 
-ORGANIZAR CONTAINER "form" "verticalmente"
-APLICAR SOMBRA "agressiva" NO "form"
-COLORIR "form" PARA "cinza"
-ARRENDONDAR CONTAINER "form" "moderadamente"
-ALINHAR ITEMS CONTAINER "form" "centro"
+ORGANIZAR CONTAINER "formulario" "verticalmente"
+APLICAR SOMBRA "suave" NO "formulario"
+COLORIR "formulario" PARA "branco"
+ARRENDONDAR CONTAINER "formulario" "moderadamente"
+ALINHAR ITENS CONTAINER "formulario" "centro"
 
-JUSTIFICAR ITEMS CONTAINER "form_botao" "final"
+JUSTIFICAR ITENS CONTAINER "form_botao" "final"
+ADICIONAR AJUDA PARA ITEM "Cadastrar" COM TEXTO "Salvar usuário no sistema"

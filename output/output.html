@@ -3,27 +3,50 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
-<body style="width: 1200px; height: 1200px;" class="tela">
-<div style="display:flex; width: 600px; height: 600px; padding:5px;" class="container" id="container_1">
-<h1 id=formulario>FORMULARIO</h1>
-<div style="display:flex; width: 300px; height: 300px; padding:5px;" class="container" id="form">
-<p id=digite_seus_dados>Digite seus dados</p>
+<body style="width: 1400px; height: 1200px;" class="tela">
+<div style="display:flex; width: 1200px; height: 1000px; padding:5px;" class="container" id=container_geral>
+<div style="display:flex; width: 400px; height: 400px; padding:5px;" class="container" id=imagem>
+</div>
+<h1 id=cadastro_de_usu„°rio>Cadastro de Usu√°rio</h1>
+<h3 id=forne„ßa_todas_as_informa„ß„µes_requeridas>Forne√ßa todas as informa√ß√µes requeridas</h3>
+<div style="display:flex; width: 1000px; height: 800px; padding:5px;" class="container" id=formulario>
+<p id=preencha_os_campos_abaixo_para_criar_sua_conta.>Preencha os campos abaixo para criar sua conta.</p>
 <label id=nome_completo style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
             Nome completo
             <input type="text"/>
+        </label>
+<label id=email style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
+            Email
+            <input type="email"/>
+        </label>
+<label id=telefone style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
+            Telefone
+            <input type="tel"/>
         </label>
 <label id=data_de_nascimento style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
             Data de nascimento
             <input type="date"/>
         </label>
+<p id=escolha_uma_senha_segura>Escolha uma senha segura</p>
 <label id=senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
             Senha
             <input type="password"/>
         </label>
-<div style="display:flex; width: 290px; height: 30px; padding:5px;" class="container" id="form_botao">
-<button>Enviar</button>
+<label id=confirmar_senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
+            Confirmar senha
+            <input type="password"/>
+        </label>
+<p id=prefer„™ncias_de_comunica„ß„£o>Prefer√™ncias de comunica√ß√£o</p>
+<label id=receber_novidades_por_e-mail style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
+            Receber novidades por e-mail
+            <input type="checkbox"/>
+        </label>
+<label id=aceito_os_termos_e_condi„ß„µes style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
+            Aceito os termos e condi√ß√µes
+            <input type="checkbox"/>
+        </label>
+<div style="display:flex; width: 800px; height: 50px; padding:5px;" class="container" id=form_botao>
+<button id="cadastrar">Cadastrar</button>
 </div>
 </div>
 </div>
-</body>
-</html>

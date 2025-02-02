@@ -1,10 +1,13 @@
-#container_1{background-color: #CCFFCC}
-#container_1{align-items: center}
-#container_1{justify-content: center}
-#container_1{flex-direction: column}
-#form{flex-direction: column}
-#form{box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25)}
-#form{background-color: #D9D9D9}
-#form{border-radius: 8px}
-#form{align-items: center}
+#imagem { background-image: url('https://tiflux.com/wp-content/uploads/2020/03/data-center-completo.png'); background-size: cover; }
+#container_geral{background-color: #B3D9FF}
+#container_geral{align-items: center}
+#container_geral{justify-content: center}
+#container_geral{flex-direction: column}
+#formulario{flex-direction: column}
+#formulario{box-shadow: suave}
+#formulario{background-color: #F8F8F8}
+#formulario{border-radius: 8px}
+#formulario{align-items: center}
 #form_botao{justify-content: end}
+#cadastrar::after { content: 'Salvar usuário no sistema'; position: absolute; visibility: hidden; background-color: black; color: white; padding: 5px; border-radius: 4px; }
+#cadastrar:hover::after { visibility: visible; }
