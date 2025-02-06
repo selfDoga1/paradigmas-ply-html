@@ -25,7 +25,7 @@ tokens = (
     'APLICAR',
     'SOMBRA',
     'NO',
-    'ARRENDONDAR',
+    'ARREDONDAR',
     'BOTAO',
     'E',
     'COR',
@@ -65,7 +65,7 @@ t_ORGANIZAR         = r'ORGANIZAR'
 t_APLICAR           = r'APLICAR'
 t_NO                = r'NO'
 t_SOMBRA            = r'SOMBRA'
-t_ARRENDONDAR       = r'ARRENDONDAR'
+t_ARREDONDAR       = r'ARREDONDAR'
 t_BOTAO             = r'BOTAO'
 t_E                 = r'E'
 t_COR               = r'COR'
@@ -83,7 +83,7 @@ def t_STRING(t):
     return t
 
 def t_LISTAGEM(t):
-    r'\[[\wÀ-ÿ]+(?:\s*,\s*[\wÀ-ÿ]+)*\]'
+    r'\[(?:\s*[\wÀ-ÿ\s]+\s*,)*\s*[\wÀ-ÿ\s]+\]'
     t.value = str(t.value)
     t.value = t.value.replace('[', '')
     t.value = t.value.replace(']', '')

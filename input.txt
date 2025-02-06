@@ -1,15 +1,25 @@
-CRIAR TELA 1200 X 1400
+CRIAR TELA
 
-ABRIR CONTAINER "container_geral" 1000 X 1200
+ABRIR CONTAINER "geral" 1300 X 1200
+ALINHAR ITENS "geral" "centro"
+JUSTIFICAR ITENS "geral" "centro"
+ORGANIZAR "geral" "verticalmente"
 
-    ABRIR CONTAINER "imagem" 400 X 400
+    ABRIR CONTAINER "imagem" 800 X 800
     FECHAR CONTAINER
     ADICIONAR IMAGEM "https://tiflux.com/wp-content/uploads/2020/03/data-center-completo.png" COMO FUNDO NO CONTAINER "imagem"
 
     ADICIONAR CABECALHO COM TEXTO "Cadastro de Usuário"
     ADICIONAR CABECALHO SECUNDARIO COM TEXTO "Forneça todas as informações requeridas"
 
-    ABRIR CONTAINER "formulario" 800 X 1000
+    ABRIR CONTAINER "formulario" 1000 X 800
+    ORGANIZAR "formulario" "verticalmente"
+    APLICAR SOMBRA "agressiva" NO "formulario"
+    COLORIR "formulario" PARA "branco"
+    ARREDONDAR "formulario" "moderadamente"
+    ALINHAR ITENS "formulario" "centro"
+    JUSTIFICAR ITENS "formulario" "inicio"
+
         ADICIONAR TEXTO "Preencha os campos abaixo para criar sua conta."
 
         ADICIONAR ENTRADA TIPO "texto" COM ROTULO "Nome completo"
@@ -21,28 +31,23 @@ ABRIR CONTAINER "container_geral" 1000 X 1200
         ADICIONAR ENTRADA TIPO "senha" COM ROTULO "Senha"
         ADICIONAR ENTRADA TIPO "senha" COM ROTULO "Confirmar senha"
 
-        ADICIONAR TEXTO "Preferências de comunicação"
-        ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Receber novidades por e-mail"
-        ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Aceito os termos e condições"
-        
-        ABRIR CONTAINER "form_botao" 50 X 800
-            ADICIONAR BOTAO COM ROTULO "Cadastrar"
+        ADICIONAR CABECALHO SECUNDARIO COM TEXTO "Preferências de comunicação"
+
+        ABRIR CONTAINER "checkboxes"
+        JUSTIFICAR ITENS "checkboxes" "destribuido"
+            ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Receber novidades por e-mail"
+            ADICIONAR ENTRADA TIPO "checkbox" COM ROTULO "Aceito os termos e condições"
         FECHAR CONTAINER
+
+        ABRIR CONTAINER "form_botao" 20 X 800
+        JUSTIFICAR ITENS "form_botao" "final"
+            ADICIONAR BOTAO COM ROTULO "Cadastrar"
+            ADICIONAR AJUDA PARA ITEM "Cadastrar" COM TEXTO "Salvar usuário no sistema"
+        FECHAR CONTAINER
+
+        CRIAR LISTA ORDENADA "Vantagens" COM ITENS [Rápido, Seguro, Escalável, Confiável, Alta disponibilidade]
 
     FECHAR CONTAINER
 
 FECHAR CONTAINER
 
-COLORIR "container_geral" PARA "azul"
-ALINHAR ITENS CONTAINER "container_geral" "centro"
-JUSTIFICAR ITENS CONTAINER "container_geral" "centro"
-ORGANIZAR CONTAINER "container_geral" "verticalmente"
-
-ORGANIZAR CONTAINER "formulario" "verticalmente"
-APLICAR SOMBRA "suave" NO "formulario"
-COLORIR "formulario" PARA "branco"
-ARRENDONDAR CONTAINER "formulario" "moderadamente"
-ALINHAR ITENS CONTAINER "formulario" "centro"
-
-JUSTIFICAR ITENS CONTAINER "form_botao" "final"
-ADICIONAR AJUDA PARA ITEM "Cadastrar" COM TEXTO "Salvar usuário no sistema"

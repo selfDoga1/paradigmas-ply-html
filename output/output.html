@@ -1,52 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-</head>
-<body style="width: 1400px; height: 1200px;" class="tela">
-<div style="display:flex; width: 1200px; height: 1000px; padding:5px;" class="container" id=container_geral>
-<div style="display:flex; width: 400px; height: 400px; padding:5px;" class="container" id=imagem>
+<!DOCTYPE html><html lang="pt-br"><head><link rel="stylesheet" href="style.css"><meta charset="UTF-8"><title>paradigmas ply html</title></head><body style="width: 100%; height: 100%; justify-items: center;" class="tela">
+<div style="display:flex; width: 1200px; height: 1300px; padding:15px;" class="container" id=geral>
+<div style="display:flex; width: 800px; height: 800px; padding:15px;" class="container" id=imagem>
 </div>
-<h1 id=cadastro_de_usu�rio>Cadastro de Usuário</h1>
-<h3 id=forne�a_todas_as_informa��es_requeridas>Forneça todas as informações requeridas</h3>
-<div style="display:flex; width: 1000px; height: 800px; padding:5px;" class="container" id=formulario>
+<h1 id=cadastro_de_usuário>Cadastro de Usuário</h1>
+<h3 id=forneça_todas_as_informações_requeridas>Forneça todas as informações requeridas</h3>
+<div style="display:flex; width: 800px; height: 1000px; padding:15px;" class="container" id=formulario>
 <p id=preencha_os_campos_abaixo_para_criar_sua_conta.>Preencha os campos abaixo para criar sua conta.</p>
-<label id=nome_completo style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Nome completo
-            <input type="text"/>
-        </label>
-<label id=email style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Email
-            <input type="email"/>
-        </label>
-<label id=telefone style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Telefone
-            <input type="tel"/>
-        </label>
-<label id=data_de_nascimento style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Data de nascimento
-            <input type="date"/>
-        </label>
+<label id=nome_completo style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Nome completo<input type="text"/></label>
+<label id=email style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Email<input type="email"/></label>
+<label id=telefone style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Telefone<input type="tel"/></label>
+<label id=data_de_nascimento style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Data de nascimento<input type="date"/></label>
 <p id=escolha_uma_senha_segura>Escolha uma senha segura</p>
-<label id=senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Senha
-            <input type="password"/>
-        </label>
-<label id=confirmar_senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Confirmar senha
-            <input type="password"/>
-        </label>
-<p id=prefer�ncias_de_comunica��o>Preferências de comunicação</p>
-<label id=receber_novidades_por_e-mail style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Receber novidades por e-mail
-            <input type="checkbox"/>
-        </label>
-<label id=aceito_os_termos_e_condi��es style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            Aceito os termos e condições
-            <input type="checkbox"/>
-        </label>
-<div style="display:flex; width: 800px; height: 50px; padding:5px;" class="container" id=form_botao>
+<label id=senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Senha<input type="password"/></label>
+<label id=confirmar_senha style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%; gap: 5px;">Confirmar senha<input type="password"/></label>
+<h3 id=preferências_de_comunicação>Preferências de comunicação</h3>
+<div style="display:flex; width: 100%; height: 100%; padding:15px;" class="container" id=checkboxes>
+<label id=receber_novidades_por_e-mail style="display: flex; flex-direction: row; padding: 10px 0 10px 0; width:; gap: 10px;">Receber novidades por e-mail<input type="checkbox"/></label>
+<label id=aceito_os_termos_e_condições style="display: flex; flex-direction: row; padding: 10px 0 10px 0; width:; gap: 10px;">Aceito os termos e condições<input type="checkbox"/></label>
+</div>
+<div style="display:flex; width: 800px; height: 20px; padding:15px;" class="container" id=form_botao>
 <button id="cadastrar">Cadastrar</button>
 </div>
+<div>
+	<h1 id="vantagens">Vantagens</h1>
+	<ol>
+		<li>Rápido</li>
+		<li>Seguro</li>
+		<li>Escalável</li>
+		<li>Confiável</li>
+		<li>Alta disponibilidade</li>
+	</ol>
+<div>
 </div>
 </div>

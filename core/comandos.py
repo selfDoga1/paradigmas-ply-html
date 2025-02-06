@@ -11,11 +11,20 @@ def p_comandos(p):
                 | comandos comando """
 
 def p_comando_tela(p):
-    """ comando : CRIAR TELA NUMERO X NUMERO"""
+    """ comando : CRIAR TELA NUMERO X NUMERO
+                | CRIAR TELA
+    """
 
-    largura, altura = p[3], p[5]
+    suffix = 'px'
+    print(len(p))
+    if len(p) > 3:
+        largura, altura = p[3], p[5]
+    else:
+        largura, altura = 100, 100
+        suffix = '%'
+
     html_output.append(f'''
-        <body style="width: {altura}px; height: {largura}px;" class="tela">
+        <body style="width: {altura}{suffix}; height: {largura}{suffix}; justify-items: center;" class="tela">
     '''.strip())
 
 # ================================== TEXTO =====================================
@@ -61,11 +70,20 @@ def p_comando_adicionar_ajuda(p):
 # ================================== CONTAINER =====================================
 
 def p_comando_abrir_container(p):
-    """ comando : ABRIR CONTAINER STRING NUMERO X NUMERO"""
+    """ comando : ABRIR CONTAINER STRING NUMERO X NUMERO
+                | ABRIR CONTAINER STRING
+    """
 
-    id, largura, altura = p[3], p[4], p[6]
+    id = p[3]
+    suffix = 'px'
+    if len(p) > 4:
+        largura, altura = p[4], p[6]
+    else:
+        largura, altura = 100, 100
+        suffix = '%'
+
     html_output.append(f'''
-        <div style="display:flex; width: {altura}px; height: {largura}px; padding:5px;" class="container" id={id}>
+        <div style="display:flex; width: {altura}{suffix}; height: {largura}{suffix}; padding:15px;" class="container" id={id}>
     '''.strip())
 
 def p_comando_fechar_container(p):
@@ -82,37 +100,37 @@ def p_comando_adicionar_imagem_fundo(p):
     css_output.append(f"#{convert_to_id(container_id)} {{ background-image: url('{imagem_fundo}'); background-size: cover; }}")
 
 
-def p_alinhar_items_container(p):
-    """ comando : ALINHAR ITENS CONTAINER STRING STRING """
+def p_alinhar_items(p):
+    """ comando : ALINHAR ITENS STRING STRING """
 
-    container_id, alinhamento = p[4], p[5]
+    container_id, alinhamento = p[3], p[4]
 
     container_id = container_id
     alinhamento = alinhamentos[alinhamento]
 
     css_output.append("#{id}{{align-items: {alinhamento}}}".format(id=container_id, alinhamento=alinhamento))
 
-def p_justificar_items_container(p):
-    """ comando : JUSTIFICAR ITENS CONTAINER STRING STRING """
+def p_justificar_items(p):
+    """ comando : JUSTIFICAR ITENS STRING STRING """
 
-    container_id, alinhamento = p[4], p[5]
+    container_id, alinhamento = p[3], p[4]
 
     container_id = container_id
     alinhamento = alinhamentos[alinhamento]
 
     css_output.append("#{id}{{justify-content: {alinhamento}}}".format(id=container_id, alinhamento=alinhamento))
 
-def p_organizar_container(p):
-    """ comando : ORGANIZAR CONTAINER STRING STRING """
-    container_id, direcao = p[3], p[4]
+def p_organizar(p):
+    """ comando : ORGANIZAR STRING STRING """
+    container_id, direcao = p[2], p[3]
     container_id = container_id
     direcao = direcoes_config.get(direcao, direcao)
     css_output.append("#{id}{{flex-direction: {direcao}}}".format(id=container_id, direcao=direcao))
 
-def p_arredondar_container(p):
-    """ comando : ARRENDONDAR CONTAINER STRING STRING """
+def p_arredondar(p):
+    """ comando : ARREDONDAR STRING STRING """
 
-    container_id, intensidade = p[3], p[4]
+    container_id, intensidade = p[2], p[3]
     container_id = container_id
     intensidade = arredondar_config.get(intensidade, intensidade)  # Busca no dicionário
     css_output.append("#{id}{{border-radius: {raio}}}".format(id=container_id, raio=intensidade))
@@ -135,12 +153,17 @@ def p_comando_adicionar_entrada(p):
     tipo_entrada = entradas.get(p[4])
     rotulo = p[7]
     rotulo_id = convert_to_id(rotulo)
+    gap = "5px"
+    width = "100%"
+
+    flex_direction = "column"
+    if tipo_entrada == "checkbox":
+        flex_direction = "row"
+        gap = "10px"
+        width = ""
 
     html_output.append(f"""
-        <label id={rotulo_id} style="display: flex; flex-direction: column; padding: 10px 0 10px 0; width:100%">
-            {rotulo}
-            <input type="{tipo_entrada}"/>
-        </label>
+        <label id={rotulo_id} style="display: flex; flex-direction: {flex_direction}; padding: 10px 0 10px 0; width:{width}; gap: {gap};">{rotulo}<input type="{tipo_entrada}"/></label>
     """.strip())
 
 # ================================== OUTROS =====================================

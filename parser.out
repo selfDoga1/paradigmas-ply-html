@@ -12,65 +12,67 @@ Rule 0     S' -> comandos
 Rule 1     comandos -> comando
 Rule 2     comandos -> comandos comando
 Rule 3     comando -> CRIAR TELA NUMERO X NUMERO
-Rule 4     comando -> ADICIONAR TEXTO STRING
-Rule 5     comando -> COLORIR TEXTO STRING PARA STRING
-Rule 6     comando -> ADICIONAR CABECALHO COM TEXTO STRING
-Rule 7     comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
-Rule 8     comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
-Rule 9     comando -> ABRIR CONTAINER STRING NUMERO X NUMERO
-Rule 10    comando -> FECHAR CONTAINER
-Rule 11    comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
-Rule 12    comando -> ALINHAR ITENS CONTAINER STRING STRING
-Rule 13    comando -> JUSTIFICAR ITENS CONTAINER STRING STRING
-Rule 14    comando -> ORGANIZAR CONTAINER STRING STRING
-Rule 15    comando -> ARRENDONDAR CONTAINER STRING STRING
-Rule 16    comando -> ADICIONAR BOTAO COM ROTULO STRING
-Rule 17    comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
-Rule 18    comando -> APLICAR SOMBRA STRING NO STRING
-Rule 19    comando -> COLORIR STRING PARA STRING
-Rule 20    comando -> CRIAR LISTA STRING COM ITENS LISTAGEM
-Rule 21    comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
+Rule 4     comando -> CRIAR TELA
+Rule 5     comando -> ADICIONAR TEXTO STRING
+Rule 6     comando -> COLORIR TEXTO STRING PARA STRING
+Rule 7     comando -> ADICIONAR CABECALHO COM TEXTO STRING
+Rule 8     comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
+Rule 9     comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
+Rule 10    comando -> ABRIR CONTAINER STRING NUMERO X NUMERO
+Rule 11    comando -> ABRIR CONTAINER STRING
+Rule 12    comando -> FECHAR CONTAINER
+Rule 13    comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
+Rule 14    comando -> ALINHAR ITENS STRING STRING
+Rule 15    comando -> JUSTIFICAR ITENS STRING STRING
+Rule 16    comando -> ORGANIZAR STRING STRING
+Rule 17    comando -> ARREDONDAR STRING STRING
+Rule 18    comando -> ADICIONAR BOTAO COM ROTULO STRING
+Rule 19    comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
+Rule 20    comando -> APLICAR SOMBRA STRING NO STRING
+Rule 21    comando -> COLORIR STRING PARA STRING
+Rule 22    comando -> CRIAR LISTA STRING COM ITENS LISTAGEM
+Rule 23    comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
 
 Terminals, with rules where they appear
 
-ABRIR                : 9
-ADICIONAR            : 4 6 7 8 11 16 17
-AJUDA                : 8
-ALINHAR              : 12
-APLICAR              : 18
-ARRENDONDAR          : 15
-BOTAO                : 16
-CABECALHO            : 6 7
-COLORIR              : 5 19
-COM                  : 6 7 8 16 17 20 21
-COMO                 : 11
-CONTAINER            : 9 10 11 12 13 14 15
+ABRIR                : 10 11
+ADICIONAR            : 5 7 8 9 13 18 19
+AJUDA                : 9
+ALINHAR              : 14
+APLICAR              : 20
+ARREDONDAR           : 17
+BOTAO                : 18
+CABECALHO            : 7 8
+COLORIR              : 6 21
+COM                  : 7 8 9 18 19 22 23
+COMO                 : 13
+CONTAINER            : 10 11 12 13
 COR                  : 
-CRIAR                : 3 20 21
+CRIAR                : 3 4 22 23
 E                    : 
-ENTRADA              : 17
-FECHAR               : 10
-FUNDO                : 11
-IMAGEM               : 11
-ITEM                 : 8
-ITENS                : 12 13 20 21
-JUSTIFICAR           : 13
-LISTA                : 20 21
-LISTAGEM             : 20 21
-NO                   : 11 18
-NUMERO               : 3 3 9 9
-ORDENADA             : 21
-ORGANIZAR            : 14
-PARA                 : 5 8 19
-ROTULO               : 16 17
-SECUNDARIO           : 7
-SOMBRA               : 18
-STRING               : 4 5 5 6 7 8 8 9 11 11 12 12 13 13 14 14 15 15 16 17 17 18 18 19 19 20 21
+ENTRADA              : 19
+FECHAR               : 12
+FUNDO                : 13
+IMAGEM               : 13
+ITEM                 : 9
+ITENS                : 14 15 22 23
+JUSTIFICAR           : 15
+LISTA                : 22 23
+LISTAGEM             : 22 23
+NO                   : 13 20
+NUMERO               : 3 3 10 10
+ORDENADA             : 23
+ORGANIZAR            : 16
+PARA                 : 6 9 21
+ROTULO               : 18 19
+SECUNDARIO           : 8
+SOMBRA               : 20
+STRING               : 5 6 6 7 8 9 9 10 11 13 13 14 14 15 15 16 16 17 17 18 19 19 20 20 21 21 22 23
 TAMANHO              : 
-TELA                 : 3
-TEXTO                : 4 5 6 7 8
-TIPO                 : 17
-X                    : 3 9
+TELA                 : 3 4
+TEXTO                : 5 6 7 8 9
+TIPO                 : 19
+X                    : 3 10
 error                : 
 
 Nonterminals, with rules where they appear
@@ -86,24 +88,26 @@ state 0
     (1) comandos -> . comando
     (2) comandos -> . comandos comando
     (3) comando -> . CRIAR TELA NUMERO X NUMERO
-    (4) comando -> . ADICIONAR TEXTO STRING
-    (5) comando -> . COLORIR TEXTO STRING PARA STRING
-    (6) comando -> . ADICIONAR CABECALHO COM TEXTO STRING
-    (7) comando -> . ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
-    (8) comando -> . ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
-    (9) comando -> . ABRIR CONTAINER STRING NUMERO X NUMERO
-    (10) comando -> . FECHAR CONTAINER
-    (11) comando -> . ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
-    (12) comando -> . ALINHAR ITENS CONTAINER STRING STRING
-    (13) comando -> . JUSTIFICAR ITENS CONTAINER STRING STRING
-    (14) comando -> . ORGANIZAR CONTAINER STRING STRING
-    (15) comando -> . ARRENDONDAR CONTAINER STRING STRING
-    (16) comando -> . ADICIONAR BOTAO COM ROTULO STRING
-    (17) comando -> . ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
-    (18) comando -> . APLICAR SOMBRA STRING NO STRING
-    (19) comando -> . COLORIR STRING PARA STRING
-    (20) comando -> . CRIAR LISTA STRING COM ITENS LISTAGEM
-    (21) comando -> . CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
+    (4) comando -> . CRIAR TELA
+    (5) comando -> . ADICIONAR TEXTO STRING
+    (6) comando -> . COLORIR TEXTO STRING PARA STRING
+    (7) comando -> . ADICIONAR CABECALHO COM TEXTO STRING
+    (8) comando -> . ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
+    (9) comando -> . ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
+    (10) comando -> . ABRIR CONTAINER STRING NUMERO X NUMERO
+    (11) comando -> . ABRIR CONTAINER STRING
+    (12) comando -> . FECHAR CONTAINER
+    (13) comando -> . ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
+    (14) comando -> . ALINHAR ITENS STRING STRING
+    (15) comando -> . JUSTIFICAR ITENS STRING STRING
+    (16) comando -> . ORGANIZAR STRING STRING
+    (17) comando -> . ARREDONDAR STRING STRING
+    (18) comando -> . ADICIONAR BOTAO COM ROTULO STRING
+    (19) comando -> . ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
+    (20) comando -> . APLICAR SOMBRA STRING NO STRING
+    (21) comando -> . COLORIR STRING PARA STRING
+    (22) comando -> . CRIAR LISTA STRING COM ITENS LISTAGEM
+    (23) comando -> . CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
 
     CRIAR           shift and go to state 3
     ADICIONAR       shift and go to state 4
@@ -113,7 +117,7 @@ state 0
     ALINHAR         shift and go to state 8
     JUSTIFICAR      shift and go to state 9
     ORGANIZAR       shift and go to state 10
-    ARRENDONDAR     shift and go to state 11
+    ARREDONDAR      shift and go to state 11
     APLICAR         shift and go to state 12
 
     comandos                       shift and go to state 1
@@ -124,24 +128,26 @@ state 1
     (0) S' -> comandos .
     (2) comandos -> comandos . comando
     (3) comando -> . CRIAR TELA NUMERO X NUMERO
-    (4) comando -> . ADICIONAR TEXTO STRING
-    (5) comando -> . COLORIR TEXTO STRING PARA STRING
-    (6) comando -> . ADICIONAR CABECALHO COM TEXTO STRING
-    (7) comando -> . ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
-    (8) comando -> . ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
-    (9) comando -> . ABRIR CONTAINER STRING NUMERO X NUMERO
-    (10) comando -> . FECHAR CONTAINER
-    (11) comando -> . ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
-    (12) comando -> . ALINHAR ITENS CONTAINER STRING STRING
-    (13) comando -> . JUSTIFICAR ITENS CONTAINER STRING STRING
-    (14) comando -> . ORGANIZAR CONTAINER STRING STRING
-    (15) comando -> . ARRENDONDAR CONTAINER STRING STRING
-    (16) comando -> . ADICIONAR BOTAO COM ROTULO STRING
-    (17) comando -> . ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
-    (18) comando -> . APLICAR SOMBRA STRING NO STRING
-    (19) comando -> . COLORIR STRING PARA STRING
-    (20) comando -> . CRIAR LISTA STRING COM ITENS LISTAGEM
-    (21) comando -> . CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
+    (4) comando -> . CRIAR TELA
+    (5) comando -> . ADICIONAR TEXTO STRING
+    (6) comando -> . COLORIR TEXTO STRING PARA STRING
+    (7) comando -> . ADICIONAR CABECALHO COM TEXTO STRING
+    (8) comando -> . ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING
+    (9) comando -> . ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING
+    (10) comando -> . ABRIR CONTAINER STRING NUMERO X NUMERO
+    (11) comando -> . ABRIR CONTAINER STRING
+    (12) comando -> . FECHAR CONTAINER
+    (13) comando -> . ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING
+    (14) comando -> . ALINHAR ITENS STRING STRING
+    (15) comando -> . JUSTIFICAR ITENS STRING STRING
+    (16) comando -> . ORGANIZAR STRING STRING
+    (17) comando -> . ARREDONDAR STRING STRING
+    (18) comando -> . ADICIONAR BOTAO COM ROTULO STRING
+    (19) comando -> . ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING
+    (20) comando -> . APLICAR SOMBRA STRING NO STRING
+    (21) comando -> . COLORIR STRING PARA STRING
+    (22) comando -> . CRIAR LISTA STRING COM ITENS LISTAGEM
+    (23) comando -> . CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM
 
     CRIAR           shift and go to state 3
     ADICIONAR       shift and go to state 4
@@ -151,7 +157,7 @@ state 1
     ALINHAR         shift and go to state 8
     JUSTIFICAR      shift and go to state 9
     ORGANIZAR       shift and go to state 10
-    ARRENDONDAR     shift and go to state 11
+    ARREDONDAR      shift and go to state 11
     APLICAR         shift and go to state 12
 
     comando                        shift and go to state 13
@@ -168,7 +174,7 @@ state 2
     ALINHAR         reduce using rule 1 (comandos -> comando .)
     JUSTIFICAR      reduce using rule 1 (comandos -> comando .)
     ORGANIZAR       reduce using rule 1 (comandos -> comando .)
-    ARRENDONDAR     reduce using rule 1 (comandos -> comando .)
+    ARREDONDAR      reduce using rule 1 (comandos -> comando .)
     APLICAR         reduce using rule 1 (comandos -> comando .)
     $end            reduce using rule 1 (comandos -> comando .)
 
@@ -176,8 +182,9 @@ state 2
 state 3
 
     (3) comando -> CRIAR . TELA NUMERO X NUMERO
-    (20) comando -> CRIAR . LISTA STRING COM ITENS LISTAGEM
-    (21) comando -> CRIAR . LISTA ORDENADA STRING COM ITENS LISTAGEM
+    (4) comando -> CRIAR . TELA
+    (22) comando -> CRIAR . LISTA STRING COM ITENS LISTAGEM
+    (23) comando -> CRIAR . LISTA ORDENADA STRING COM ITENS LISTAGEM
 
     TELA            shift and go to state 14
     LISTA           shift and go to state 15
@@ -185,13 +192,13 @@ state 3
 
 state 4
 
-    (4) comando -> ADICIONAR . TEXTO STRING
-    (6) comando -> ADICIONAR . CABECALHO COM TEXTO STRING
-    (7) comando -> ADICIONAR . CABECALHO SECUNDARIO COM TEXTO STRING
-    (8) comando -> ADICIONAR . AJUDA PARA ITEM STRING COM TEXTO STRING
-    (11) comando -> ADICIONAR . IMAGEM STRING COMO FUNDO NO CONTAINER STRING
-    (16) comando -> ADICIONAR . BOTAO COM ROTULO STRING
-    (17) comando -> ADICIONAR . ENTRADA TIPO STRING COM ROTULO STRING
+    (5) comando -> ADICIONAR . TEXTO STRING
+    (7) comando -> ADICIONAR . CABECALHO COM TEXTO STRING
+    (8) comando -> ADICIONAR . CABECALHO SECUNDARIO COM TEXTO STRING
+    (9) comando -> ADICIONAR . AJUDA PARA ITEM STRING COM TEXTO STRING
+    (13) comando -> ADICIONAR . IMAGEM STRING COMO FUNDO NO CONTAINER STRING
+    (18) comando -> ADICIONAR . BOTAO COM ROTULO STRING
+    (19) comando -> ADICIONAR . ENTRADA TIPO STRING COM ROTULO STRING
 
     TEXTO           shift and go to state 16
     CABECALHO       shift and go to state 17
@@ -203,8 +210,8 @@ state 4
 
 state 5
 
-    (5) comando -> COLORIR . TEXTO STRING PARA STRING
-    (19) comando -> COLORIR . STRING PARA STRING
+    (6) comando -> COLORIR . TEXTO STRING PARA STRING
+    (21) comando -> COLORIR . STRING PARA STRING
 
     TEXTO           shift and go to state 22
     STRING          shift and go to state 23
@@ -212,49 +219,50 @@ state 5
 
 state 6
 
-    (9) comando -> ABRIR . CONTAINER STRING NUMERO X NUMERO
+    (10) comando -> ABRIR . CONTAINER STRING NUMERO X NUMERO
+    (11) comando -> ABRIR . CONTAINER STRING
 
     CONTAINER       shift and go to state 24
 
 
 state 7
 
-    (10) comando -> FECHAR . CONTAINER
+    (12) comando -> FECHAR . CONTAINER
 
     CONTAINER       shift and go to state 25
 
 
 state 8
 
-    (12) comando -> ALINHAR . ITENS CONTAINER STRING STRING
+    (14) comando -> ALINHAR . ITENS STRING STRING
 
     ITENS           shift and go to state 26
 
 
 state 9
 
-    (13) comando -> JUSTIFICAR . ITENS CONTAINER STRING STRING
+    (15) comando -> JUSTIFICAR . ITENS STRING STRING
 
     ITENS           shift and go to state 27
 
 
 state 10
 
-    (14) comando -> ORGANIZAR . CONTAINER STRING STRING
+    (16) comando -> ORGANIZAR . STRING STRING
 
-    CONTAINER       shift and go to state 28
+    STRING          shift and go to state 28
 
 
 state 11
 
-    (15) comando -> ARRENDONDAR . CONTAINER STRING STRING
+    (17) comando -> ARREDONDAR . STRING STRING
 
-    CONTAINER       shift and go to state 29
+    STRING          shift and go to state 29
 
 
 state 12
 
-    (18) comando -> APLICAR . SOMBRA STRING NO STRING
+    (20) comando -> APLICAR . SOMBRA STRING NO STRING
 
     SOMBRA          shift and go to state 30
 
@@ -271,7 +279,7 @@ state 13
     ALINHAR         reduce using rule 2 (comandos -> comandos comando .)
     JUSTIFICAR      reduce using rule 2 (comandos -> comandos comando .)
     ORGANIZAR       reduce using rule 2 (comandos -> comandos comando .)
-    ARRENDONDAR     reduce using rule 2 (comandos -> comandos comando .)
+    ARREDONDAR      reduce using rule 2 (comandos -> comandos comando .)
     APLICAR         reduce using rule 2 (comandos -> comandos comando .)
     $end            reduce using rule 2 (comandos -> comandos comando .)
 
@@ -279,14 +287,26 @@ state 13
 state 14
 
     (3) comando -> CRIAR TELA . NUMERO X NUMERO
+    (4) comando -> CRIAR TELA .
 
     NUMERO          shift and go to state 31
+    CRIAR           reduce using rule 4 (comando -> CRIAR TELA .)
+    ADICIONAR       reduce using rule 4 (comando -> CRIAR TELA .)
+    COLORIR         reduce using rule 4 (comando -> CRIAR TELA .)
+    ABRIR           reduce using rule 4 (comando -> CRIAR TELA .)
+    FECHAR          reduce using rule 4 (comando -> CRIAR TELA .)
+    ALINHAR         reduce using rule 4 (comando -> CRIAR TELA .)
+    JUSTIFICAR      reduce using rule 4 (comando -> CRIAR TELA .)
+    ORGANIZAR       reduce using rule 4 (comando -> CRIAR TELA .)
+    ARREDONDAR      reduce using rule 4 (comando -> CRIAR TELA .)
+    APLICAR         reduce using rule 4 (comando -> CRIAR TELA .)
+    $end            reduce using rule 4 (comando -> CRIAR TELA .)
 
 
 state 15
 
-    (20) comando -> CRIAR LISTA . STRING COM ITENS LISTAGEM
-    (21) comando -> CRIAR LISTA . ORDENADA STRING COM ITENS LISTAGEM
+    (22) comando -> CRIAR LISTA . STRING COM ITENS LISTAGEM
+    (23) comando -> CRIAR LISTA . ORDENADA STRING COM ITENS LISTAGEM
 
     STRING          shift and go to state 32
     ORDENADA        shift and go to state 33
@@ -294,15 +314,15 @@ state 15
 
 state 16
 
-    (4) comando -> ADICIONAR TEXTO . STRING
+    (5) comando -> ADICIONAR TEXTO . STRING
 
     STRING          shift and go to state 34
 
 
 state 17
 
-    (6) comando -> ADICIONAR CABECALHO . COM TEXTO STRING
-    (7) comando -> ADICIONAR CABECALHO . SECUNDARIO COM TEXTO STRING
+    (7) comando -> ADICIONAR CABECALHO . COM TEXTO STRING
+    (8) comando -> ADICIONAR CABECALHO . SECUNDARIO COM TEXTO STRING
 
     COM             shift and go to state 35
     SECUNDARIO      shift and go to state 36
@@ -310,101 +330,102 @@ state 17
 
 state 18
 
-    (8) comando -> ADICIONAR AJUDA . PARA ITEM STRING COM TEXTO STRING
+    (9) comando -> ADICIONAR AJUDA . PARA ITEM STRING COM TEXTO STRING
 
     PARA            shift and go to state 37
 
 
 state 19
 
-    (11) comando -> ADICIONAR IMAGEM . STRING COMO FUNDO NO CONTAINER STRING
+    (13) comando -> ADICIONAR IMAGEM . STRING COMO FUNDO NO CONTAINER STRING
 
     STRING          shift and go to state 38
 
 
 state 20
 
-    (16) comando -> ADICIONAR BOTAO . COM ROTULO STRING
+    (18) comando -> ADICIONAR BOTAO . COM ROTULO STRING
 
     COM             shift and go to state 39
 
 
 state 21
 
-    (17) comando -> ADICIONAR ENTRADA . TIPO STRING COM ROTULO STRING
+    (19) comando -> ADICIONAR ENTRADA . TIPO STRING COM ROTULO STRING
 
     TIPO            shift and go to state 40
 
 
 state 22
 
-    (5) comando -> COLORIR TEXTO . STRING PARA STRING
+    (6) comando -> COLORIR TEXTO . STRING PARA STRING
 
     STRING          shift and go to state 41
 
 
 state 23
 
-    (19) comando -> COLORIR STRING . PARA STRING
+    (21) comando -> COLORIR STRING . PARA STRING
 
     PARA            shift and go to state 42
 
 
 state 24
 
-    (9) comando -> ABRIR CONTAINER . STRING NUMERO X NUMERO
+    (10) comando -> ABRIR CONTAINER . STRING NUMERO X NUMERO
+    (11) comando -> ABRIR CONTAINER . STRING
 
     STRING          shift and go to state 43
 
 
 state 25
 
-    (10) comando -> FECHAR CONTAINER .
+    (12) comando -> FECHAR CONTAINER .
 
-    CRIAR           reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    ADICIONAR       reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    COLORIR         reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    ABRIR           reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    FECHAR          reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    ALINHAR         reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    JUSTIFICAR      reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    ORGANIZAR       reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    ARRENDONDAR     reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    APLICAR         reduce using rule 10 (comando -> FECHAR CONTAINER .)
-    $end            reduce using rule 10 (comando -> FECHAR CONTAINER .)
+    CRIAR           reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    ADICIONAR       reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    COLORIR         reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    ABRIR           reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    FECHAR          reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    ALINHAR         reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    JUSTIFICAR      reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    ORGANIZAR       reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    ARREDONDAR      reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    APLICAR         reduce using rule 12 (comando -> FECHAR CONTAINER .)
+    $end            reduce using rule 12 (comando -> FECHAR CONTAINER .)
 
 
 state 26
 
-    (12) comando -> ALINHAR ITENS . CONTAINER STRING STRING
+    (14) comando -> ALINHAR ITENS . STRING STRING
 
-    CONTAINER       shift and go to state 44
+    STRING          shift and go to state 44
 
 
 state 27
 
-    (13) comando -> JUSTIFICAR ITENS . CONTAINER STRING STRING
+    (15) comando -> JUSTIFICAR ITENS . STRING STRING
 
-    CONTAINER       shift and go to state 45
+    STRING          shift and go to state 45
 
 
 state 28
 
-    (14) comando -> ORGANIZAR CONTAINER . STRING STRING
+    (16) comando -> ORGANIZAR STRING . STRING
 
     STRING          shift and go to state 46
 
 
 state 29
 
-    (15) comando -> ARRENDONDAR CONTAINER . STRING STRING
+    (17) comando -> ARREDONDAR STRING . STRING
 
     STRING          shift and go to state 47
 
 
 state 30
 
-    (18) comando -> APLICAR SOMBRA . STRING NO STRING
+    (20) comando -> APLICAR SOMBRA . STRING NO STRING
 
     STRING          shift and go to state 48
 
@@ -418,283 +439,301 @@ state 31
 
 state 32
 
-    (20) comando -> CRIAR LISTA STRING . COM ITENS LISTAGEM
+    (22) comando -> CRIAR LISTA STRING . COM ITENS LISTAGEM
 
     COM             shift and go to state 50
 
 
 state 33
 
-    (21) comando -> CRIAR LISTA ORDENADA . STRING COM ITENS LISTAGEM
+    (23) comando -> CRIAR LISTA ORDENADA . STRING COM ITENS LISTAGEM
 
     STRING          shift and go to state 51
 
 
 state 34
 
-    (4) comando -> ADICIONAR TEXTO STRING .
+    (5) comando -> ADICIONAR TEXTO STRING .
 
-    CRIAR           reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    ADICIONAR       reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    COLORIR         reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    ABRIR           reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    FECHAR          reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    ALINHAR         reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    JUSTIFICAR      reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    ORGANIZAR       reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    ARRENDONDAR     reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    APLICAR         reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
-    $end            reduce using rule 4 (comando -> ADICIONAR TEXTO STRING .)
+    CRIAR           reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    ADICIONAR       reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    COLORIR         reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    ABRIR           reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    FECHAR          reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    ALINHAR         reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    JUSTIFICAR      reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    ORGANIZAR       reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    ARREDONDAR      reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    APLICAR         reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
+    $end            reduce using rule 5 (comando -> ADICIONAR TEXTO STRING .)
 
 
 state 35
 
-    (6) comando -> ADICIONAR CABECALHO COM . TEXTO STRING
+    (7) comando -> ADICIONAR CABECALHO COM . TEXTO STRING
 
     TEXTO           shift and go to state 52
 
 
 state 36
 
-    (7) comando -> ADICIONAR CABECALHO SECUNDARIO . COM TEXTO STRING
+    (8) comando -> ADICIONAR CABECALHO SECUNDARIO . COM TEXTO STRING
 
     COM             shift and go to state 53
 
 
 state 37
 
-    (8) comando -> ADICIONAR AJUDA PARA . ITEM STRING COM TEXTO STRING
+    (9) comando -> ADICIONAR AJUDA PARA . ITEM STRING COM TEXTO STRING
 
     ITEM            shift and go to state 54
 
 
 state 38
 
-    (11) comando -> ADICIONAR IMAGEM STRING . COMO FUNDO NO CONTAINER STRING
+    (13) comando -> ADICIONAR IMAGEM STRING . COMO FUNDO NO CONTAINER STRING
 
     COMO            shift and go to state 55
 
 
 state 39
 
-    (16) comando -> ADICIONAR BOTAO COM . ROTULO STRING
+    (18) comando -> ADICIONAR BOTAO COM . ROTULO STRING
 
     ROTULO          shift and go to state 56
 
 
 state 40
 
-    (17) comando -> ADICIONAR ENTRADA TIPO . STRING COM ROTULO STRING
+    (19) comando -> ADICIONAR ENTRADA TIPO . STRING COM ROTULO STRING
 
     STRING          shift and go to state 57
 
 
 state 41
 
-    (5) comando -> COLORIR TEXTO STRING . PARA STRING
+    (6) comando -> COLORIR TEXTO STRING . PARA STRING
 
     PARA            shift and go to state 58
 
 
 state 42
 
-    (19) comando -> COLORIR STRING PARA . STRING
+    (21) comando -> COLORIR STRING PARA . STRING
 
     STRING          shift and go to state 59
 
 
 state 43
 
-    (9) comando -> ABRIR CONTAINER STRING . NUMERO X NUMERO
+    (10) comando -> ABRIR CONTAINER STRING . NUMERO X NUMERO
+    (11) comando -> ABRIR CONTAINER STRING .
 
     NUMERO          shift and go to state 60
+    CRIAR           reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    ADICIONAR       reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    COLORIR         reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    ABRIR           reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    FECHAR          reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    ALINHAR         reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    JUSTIFICAR      reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    ORGANIZAR       reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    ARREDONDAR      reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    APLICAR         reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
+    $end            reduce using rule 11 (comando -> ABRIR CONTAINER STRING .)
 
 
 state 44
 
-    (12) comando -> ALINHAR ITENS CONTAINER . STRING STRING
+    (14) comando -> ALINHAR ITENS STRING . STRING
 
     STRING          shift and go to state 61
 
 
 state 45
 
-    (13) comando -> JUSTIFICAR ITENS CONTAINER . STRING STRING
+    (15) comando -> JUSTIFICAR ITENS STRING . STRING
 
     STRING          shift and go to state 62
 
 
 state 46
 
-    (14) comando -> ORGANIZAR CONTAINER STRING . STRING
+    (16) comando -> ORGANIZAR STRING STRING .
 
-    STRING          shift and go to state 63
+    CRIAR           reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    ADICIONAR       reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    COLORIR         reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    ABRIR           reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    FECHAR          reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    ALINHAR         reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    JUSTIFICAR      reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    ORGANIZAR       reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    ARREDONDAR      reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    APLICAR         reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
+    $end            reduce using rule 16 (comando -> ORGANIZAR STRING STRING .)
 
 
 state 47
 
-    (15) comando -> ARRENDONDAR CONTAINER STRING . STRING
+    (17) comando -> ARREDONDAR STRING STRING .
 
-    STRING          shift and go to state 64
+    CRIAR           reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    ADICIONAR       reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    COLORIR         reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    ABRIR           reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    FECHAR          reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    ALINHAR         reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    JUSTIFICAR      reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    ORGANIZAR       reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    ARREDONDAR      reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    APLICAR         reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
+    $end            reduce using rule 17 (comando -> ARREDONDAR STRING STRING .)
 
 
 state 48
 
-    (18) comando -> APLICAR SOMBRA STRING . NO STRING
+    (20) comando -> APLICAR SOMBRA STRING . NO STRING
 
-    NO              shift and go to state 65
+    NO              shift and go to state 63
 
 
 state 49
 
     (3) comando -> CRIAR TELA NUMERO X . NUMERO
 
-    NUMERO          shift and go to state 66
+    NUMERO          shift and go to state 64
 
 
 state 50
 
-    (20) comando -> CRIAR LISTA STRING COM . ITENS LISTAGEM
+    (22) comando -> CRIAR LISTA STRING COM . ITENS LISTAGEM
 
-    ITENS           shift and go to state 67
+    ITENS           shift and go to state 65
 
 
 state 51
 
-    (21) comando -> CRIAR LISTA ORDENADA STRING . COM ITENS LISTAGEM
+    (23) comando -> CRIAR LISTA ORDENADA STRING . COM ITENS LISTAGEM
 
-    COM             shift and go to state 68
+    COM             shift and go to state 66
 
 
 state 52
 
-    (6) comando -> ADICIONAR CABECALHO COM TEXTO . STRING
+    (7) comando -> ADICIONAR CABECALHO COM TEXTO . STRING
 
-    STRING          shift and go to state 69
+    STRING          shift and go to state 67
 
 
 state 53
 
-    (7) comando -> ADICIONAR CABECALHO SECUNDARIO COM . TEXTO STRING
+    (8) comando -> ADICIONAR CABECALHO SECUNDARIO COM . TEXTO STRING
 
-    TEXTO           shift and go to state 70
+    TEXTO           shift and go to state 68
 
 
 state 54
 
-    (8) comando -> ADICIONAR AJUDA PARA ITEM . STRING COM TEXTO STRING
+    (9) comando -> ADICIONAR AJUDA PARA ITEM . STRING COM TEXTO STRING
 
-    STRING          shift and go to state 71
+    STRING          shift and go to state 69
 
 
 state 55
 
-    (11) comando -> ADICIONAR IMAGEM STRING COMO . FUNDO NO CONTAINER STRING
+    (13) comando -> ADICIONAR IMAGEM STRING COMO . FUNDO NO CONTAINER STRING
 
-    FUNDO           shift and go to state 72
+    FUNDO           shift and go to state 70
 
 
 state 56
 
-    (16) comando -> ADICIONAR BOTAO COM ROTULO . STRING
+    (18) comando -> ADICIONAR BOTAO COM ROTULO . STRING
 
-    STRING          shift and go to state 73
+    STRING          shift and go to state 71
 
 
 state 57
 
-    (17) comando -> ADICIONAR ENTRADA TIPO STRING . COM ROTULO STRING
+    (19) comando -> ADICIONAR ENTRADA TIPO STRING . COM ROTULO STRING
 
-    COM             shift and go to state 74
+    COM             shift and go to state 72
 
 
 state 58
 
-    (5) comando -> COLORIR TEXTO STRING PARA . STRING
+    (6) comando -> COLORIR TEXTO STRING PARA . STRING
 
-    STRING          shift and go to state 75
+    STRING          shift and go to state 73
 
 
 state 59
 
-    (19) comando -> COLORIR STRING PARA STRING .
+    (21) comando -> COLORIR STRING PARA STRING .
 
-    CRIAR           reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    ADICIONAR       reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    COLORIR         reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    ABRIR           reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    FECHAR          reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    ALINHAR         reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    JUSTIFICAR      reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    ORGANIZAR       reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    ARRENDONDAR     reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    APLICAR         reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
-    $end            reduce using rule 19 (comando -> COLORIR STRING PARA STRING .)
+    CRIAR           reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    ADICIONAR       reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    COLORIR         reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    ABRIR           reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    FECHAR          reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    ALINHAR         reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    JUSTIFICAR      reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    ORGANIZAR       reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    ARREDONDAR      reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    APLICAR         reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
+    $end            reduce using rule 21 (comando -> COLORIR STRING PARA STRING .)
 
 
 state 60
 
-    (9) comando -> ABRIR CONTAINER STRING NUMERO . X NUMERO
+    (10) comando -> ABRIR CONTAINER STRING NUMERO . X NUMERO
 
-    X               shift and go to state 76
+    X               shift and go to state 74
 
 
 state 61
 
-    (12) comando -> ALINHAR ITENS CONTAINER STRING . STRING
+    (14) comando -> ALINHAR ITENS STRING STRING .
 
-    STRING          shift and go to state 77
+    CRIAR           reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    ADICIONAR       reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    COLORIR         reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    ABRIR           reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    FECHAR          reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    ALINHAR         reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    JUSTIFICAR      reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    ORGANIZAR       reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    ARREDONDAR      reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    APLICAR         reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
+    $end            reduce using rule 14 (comando -> ALINHAR ITENS STRING STRING .)
 
 
 state 62
 
-    (13) comando -> JUSTIFICAR ITENS CONTAINER STRING . STRING
+    (15) comando -> JUSTIFICAR ITENS STRING STRING .
 
-    STRING          shift and go to state 78
+    CRIAR           reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    ADICIONAR       reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    COLORIR         reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    ABRIR           reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    FECHAR          reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    ALINHAR         reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    JUSTIFICAR      reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    ORGANIZAR       reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    ARREDONDAR      reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    APLICAR         reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
+    $end            reduce using rule 15 (comando -> JUSTIFICAR ITENS STRING STRING .)
 
 
 state 63
 
-    (14) comando -> ORGANIZAR CONTAINER STRING STRING .
+    (20) comando -> APLICAR SOMBRA STRING NO . STRING
 
-    CRIAR           reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    ADICIONAR       reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    COLORIR         reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    ABRIR           reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    FECHAR          reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    ALINHAR         reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    JUSTIFICAR      reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    ORGANIZAR       reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    ARRENDONDAR     reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    APLICAR         reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
-    $end            reduce using rule 14 (comando -> ORGANIZAR CONTAINER STRING STRING .)
+    STRING          shift and go to state 75
 
 
 state 64
-
-    (15) comando -> ARRENDONDAR CONTAINER STRING STRING .
-
-    CRIAR           reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    ADICIONAR       reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    COLORIR         reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    ABRIR           reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    FECHAR          reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    ALINHAR         reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    JUSTIFICAR      reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    ORGANIZAR       reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    ARRENDONDAR     reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    APLICAR         reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-    $end            reduce using rule 15 (comando -> ARRENDONDAR CONTAINER STRING STRING .)
-
-
-state 65
-
-    (18) comando -> APLICAR SOMBRA STRING NO . STRING
-
-    STRING          shift and go to state 79
-
-
-state 66
 
     (3) comando -> CRIAR TELA NUMERO X NUMERO .
 
@@ -706,319 +745,285 @@ state 66
     ALINHAR         reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
     JUSTIFICAR      reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
     ORGANIZAR       reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
-    ARRENDONDAR     reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
+    ARREDONDAR      reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
     APLICAR         reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
     $end            reduce using rule 3 (comando -> CRIAR TELA NUMERO X NUMERO .)
 
 
+state 65
+
+    (22) comando -> CRIAR LISTA STRING COM ITENS . LISTAGEM
+
+    LISTAGEM        shift and go to state 76
+
+
+state 66
+
+    (23) comando -> CRIAR LISTA ORDENADA STRING COM . ITENS LISTAGEM
+
+    ITENS           shift and go to state 77
+
+
 state 67
 
-    (20) comando -> CRIAR LISTA STRING COM ITENS . LISTAGEM
+    (7) comando -> ADICIONAR CABECALHO COM TEXTO STRING .
 
-    LISTAGEM        shift and go to state 80
+    CRIAR           reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    ADICIONAR       reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    COLORIR         reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    ABRIR           reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    FECHAR          reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    ALINHAR         reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    JUSTIFICAR      reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    ORGANIZAR       reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    ARREDONDAR      reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    APLICAR         reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    $end            reduce using rule 7 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
 
 
 state 68
 
-    (21) comando -> CRIAR LISTA ORDENADA STRING COM . ITENS LISTAGEM
+    (8) comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO . STRING
 
-    ITENS           shift and go to state 81
+    STRING          shift and go to state 78
 
 
 state 69
 
-    (6) comando -> ADICIONAR CABECALHO COM TEXTO STRING .
+    (9) comando -> ADICIONAR AJUDA PARA ITEM STRING . COM TEXTO STRING
 
-    CRIAR           reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    ADICIONAR       reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    COLORIR         reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    ABRIR           reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    FECHAR          reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    ALINHAR         reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    JUSTIFICAR      reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    ORGANIZAR       reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    ARRENDONDAR     reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    APLICAR         reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
-    $end            reduce using rule 6 (comando -> ADICIONAR CABECALHO COM TEXTO STRING .)
+    COM             shift and go to state 79
 
 
 state 70
 
-    (7) comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO . STRING
+    (13) comando -> ADICIONAR IMAGEM STRING COMO FUNDO . NO CONTAINER STRING
 
-    STRING          shift and go to state 82
+    NO              shift and go to state 80
 
 
 state 71
 
-    (8) comando -> ADICIONAR AJUDA PARA ITEM STRING . COM TEXTO STRING
+    (18) comando -> ADICIONAR BOTAO COM ROTULO STRING .
 
-    COM             shift and go to state 83
+    CRIAR           reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    ADICIONAR       reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    COLORIR         reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    ABRIR           reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    FECHAR          reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    ALINHAR         reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    JUSTIFICAR      reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    ORGANIZAR       reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    ARREDONDAR      reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    APLICAR         reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    $end            reduce using rule 18 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
 
 
 state 72
 
-    (11) comando -> ADICIONAR IMAGEM STRING COMO FUNDO . NO CONTAINER STRING
+    (19) comando -> ADICIONAR ENTRADA TIPO STRING COM . ROTULO STRING
 
-    NO              shift and go to state 84
+    ROTULO          shift and go to state 81
 
 
 state 73
 
-    (16) comando -> ADICIONAR BOTAO COM ROTULO STRING .
+    (6) comando -> COLORIR TEXTO STRING PARA STRING .
 
-    CRIAR           reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    ADICIONAR       reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    COLORIR         reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    ABRIR           reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    FECHAR          reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    ALINHAR         reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    JUSTIFICAR      reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    ORGANIZAR       reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    ARRENDONDAR     reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    APLICAR         reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
-    $end            reduce using rule 16 (comando -> ADICIONAR BOTAO COM ROTULO STRING .)
+    CRIAR           reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ADICIONAR       reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    COLORIR         reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ABRIR           reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    FECHAR          reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ALINHAR         reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    JUSTIFICAR      reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ORGANIZAR       reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    ARREDONDAR      reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    APLICAR         reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    $end            reduce using rule 6 (comando -> COLORIR TEXTO STRING PARA STRING .)
 
 
 state 74
 
-    (17) comando -> ADICIONAR ENTRADA TIPO STRING COM . ROTULO STRING
+    (10) comando -> ABRIR CONTAINER STRING NUMERO X . NUMERO
 
-    ROTULO          shift and go to state 85
+    NUMERO          shift and go to state 82
 
 
 state 75
 
-    (5) comando -> COLORIR TEXTO STRING PARA STRING .
+    (20) comando -> APLICAR SOMBRA STRING NO STRING .
 
-    CRIAR           reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    ADICIONAR       reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    COLORIR         reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    ABRIR           reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    FECHAR          reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    ALINHAR         reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    JUSTIFICAR      reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    ORGANIZAR       reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    ARRENDONDAR     reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    APLICAR         reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
-    $end            reduce using rule 5 (comando -> COLORIR TEXTO STRING PARA STRING .)
+    CRIAR           reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    ADICIONAR       reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    COLORIR         reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    ABRIR           reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    FECHAR          reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    ALINHAR         reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    JUSTIFICAR      reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    ORGANIZAR       reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    ARREDONDAR      reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    APLICAR         reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    $end            reduce using rule 20 (comando -> APLICAR SOMBRA STRING NO STRING .)
 
 
 state 76
 
-    (9) comando -> ABRIR CONTAINER STRING NUMERO X . NUMERO
+    (22) comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .
 
-    NUMERO          shift and go to state 86
+    CRIAR           reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    ADICIONAR       reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    COLORIR         reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    ABRIR           reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    FECHAR          reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    ALINHAR         reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    JUSTIFICAR      reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    ORGANIZAR       reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    ARREDONDAR      reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    APLICAR         reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    $end            reduce using rule 22 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
 
 
 state 77
 
-    (12) comando -> ALINHAR ITENS CONTAINER STRING STRING .
+    (23) comando -> CRIAR LISTA ORDENADA STRING COM ITENS . LISTAGEM
 
-    CRIAR           reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    ADICIONAR       reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    COLORIR         reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    ABRIR           reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    FECHAR          reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    ALINHAR         reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    JUSTIFICAR      reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    ORGANIZAR       reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    ARRENDONDAR     reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    APLICAR         reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
-    $end            reduce using rule 12 (comando -> ALINHAR ITENS CONTAINER STRING STRING .)
+    LISTAGEM        shift and go to state 83
 
 
 state 78
 
-    (13) comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .
+    (8) comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .
 
-    CRIAR           reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    ADICIONAR       reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    COLORIR         reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    ABRIR           reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    FECHAR          reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    ALINHAR         reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    JUSTIFICAR      reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    ORGANIZAR       reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    ARRENDONDAR     reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    APLICAR         reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
-    $end            reduce using rule 13 (comando -> JUSTIFICAR ITENS CONTAINER STRING STRING .)
+    CRIAR           reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    ADICIONAR       reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    COLORIR         reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    ABRIR           reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    FECHAR          reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    ALINHAR         reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    JUSTIFICAR      reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    ORGANIZAR       reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    ARREDONDAR      reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    APLICAR         reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    $end            reduce using rule 8 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
 
 
 state 79
 
-    (18) comando -> APLICAR SOMBRA STRING NO STRING .
+    (9) comando -> ADICIONAR AJUDA PARA ITEM STRING COM . TEXTO STRING
 
-    CRIAR           reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    ADICIONAR       reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    COLORIR         reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    ABRIR           reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    FECHAR          reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    ALINHAR         reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    JUSTIFICAR      reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    ORGANIZAR       reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    ARRENDONDAR     reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    APLICAR         reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
-    $end            reduce using rule 18 (comando -> APLICAR SOMBRA STRING NO STRING .)
+    TEXTO           shift and go to state 84
 
 
 state 80
 
-    (20) comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .
+    (13) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO . CONTAINER STRING
 
-    CRIAR           reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    ADICIONAR       reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    COLORIR         reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    ABRIR           reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    FECHAR          reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    ALINHAR         reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    JUSTIFICAR      reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    ORGANIZAR       reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    ARRENDONDAR     reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    APLICAR         reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
-    $end            reduce using rule 20 (comando -> CRIAR LISTA STRING COM ITENS LISTAGEM .)
+    CONTAINER       shift and go to state 85
 
 
 state 81
 
-    (21) comando -> CRIAR LISTA ORDENADA STRING COM ITENS . LISTAGEM
+    (19) comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO . STRING
 
-    LISTAGEM        shift and go to state 87
+    STRING          shift and go to state 86
 
 
 state 82
 
-    (7) comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .
+    (10) comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .
 
-    CRIAR           reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    ADICIONAR       reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    COLORIR         reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    ABRIR           reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    FECHAR          reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    ALINHAR         reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    JUSTIFICAR      reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    ORGANIZAR       reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    ARRENDONDAR     reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    APLICAR         reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
-    $end            reduce using rule 7 (comando -> ADICIONAR CABECALHO SECUNDARIO COM TEXTO STRING .)
+    CRIAR           reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    ADICIONAR       reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    COLORIR         reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    ABRIR           reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    FECHAR          reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    ALINHAR         reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    JUSTIFICAR      reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    ORGANIZAR       reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    ARREDONDAR      reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    APLICAR         reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    $end            reduce using rule 10 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
 
 
 state 83
 
-    (8) comando -> ADICIONAR AJUDA PARA ITEM STRING COM . TEXTO STRING
+    (23) comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .
 
-    TEXTO           shift and go to state 88
+    CRIAR           reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    ADICIONAR       reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    COLORIR         reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    ABRIR           reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    FECHAR          reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    ALINHAR         reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    JUSTIFICAR      reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    ORGANIZAR       reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    ARREDONDAR      reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    APLICAR         reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    $end            reduce using rule 23 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
 
 
 state 84
 
-    (11) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO . CONTAINER STRING
+    (9) comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO . STRING
 
-    CONTAINER       shift and go to state 89
+    STRING          shift and go to state 87
 
 
 state 85
 
-    (17) comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO . STRING
+    (13) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER . STRING
 
-    STRING          shift and go to state 90
+    STRING          shift and go to state 88
 
 
 state 86
 
-    (9) comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .
+    (19) comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .
 
-    CRIAR           reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    ADICIONAR       reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    COLORIR         reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    ABRIR           reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    FECHAR          reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    ALINHAR         reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    JUSTIFICAR      reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    ORGANIZAR       reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    ARRENDONDAR     reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    APLICAR         reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
-    $end            reduce using rule 9 (comando -> ABRIR CONTAINER STRING NUMERO X NUMERO .)
+    CRIAR           reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    ADICIONAR       reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    COLORIR         reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    ABRIR           reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    FECHAR          reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    ALINHAR         reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    JUSTIFICAR      reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    ORGANIZAR       reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    ARREDONDAR      reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    APLICAR         reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
+    $end            reduce using rule 19 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
 
 
 state 87
 
-    (21) comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .
+    (9) comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .
 
-    CRIAR           reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    ADICIONAR       reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    COLORIR         reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    ABRIR           reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    FECHAR          reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    ALINHAR         reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    JUSTIFICAR      reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    ORGANIZAR       reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    ARRENDONDAR     reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    APLICAR         reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
-    $end            reduce using rule 21 (comando -> CRIAR LISTA ORDENADA STRING COM ITENS LISTAGEM .)
+    CRIAR           reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    ADICIONAR       reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    COLORIR         reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    ABRIR           reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    FECHAR          reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    ALINHAR         reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    JUSTIFICAR      reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    ORGANIZAR       reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    ARREDONDAR      reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    APLICAR         reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
+    $end            reduce using rule 9 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
 
 
 state 88
 
-    (8) comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO . STRING
+    (13) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .
 
-    STRING          shift and go to state 91
-
-
-state 89
-
-    (11) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER . STRING
-
-    STRING          shift and go to state 92
-
-
-state 90
-
-    (17) comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .
-
-    CRIAR           reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    ADICIONAR       reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    COLORIR         reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    ABRIR           reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    FECHAR          reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    ALINHAR         reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    JUSTIFICAR      reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    ORGANIZAR       reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    ARRENDONDAR     reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    APLICAR         reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-    $end            reduce using rule 17 (comando -> ADICIONAR ENTRADA TIPO STRING COM ROTULO STRING .)
-
-
-state 91
-
-    (8) comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .
-
-    CRIAR           reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    ADICIONAR       reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    COLORIR         reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    ABRIR           reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    FECHAR          reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    ALINHAR         reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    JUSTIFICAR      reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    ORGANIZAR       reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    ARRENDONDAR     reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    APLICAR         reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-    $end            reduce using rule 8 (comando -> ADICIONAR AJUDA PARA ITEM STRING COM TEXTO STRING .)
-
-
-state 92
-
-    (11) comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .
-
-    CRIAR           reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    ADICIONAR       reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    COLORIR         reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    ABRIR           reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    FECHAR          reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    ALINHAR         reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    JUSTIFICAR      reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    ORGANIZAR       reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    ARRENDONDAR     reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    APLICAR         reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
-    $end            reduce using rule 11 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    CRIAR           reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    ADICIONAR       reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    COLORIR         reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    ABRIR           reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    FECHAR          reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    ALINHAR         reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    JUSTIFICAR      reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    ORGANIZAR       reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    ARREDONDAR      reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    APLICAR         reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
+    $end            reduce using rule 13 (comando -> ADICIONAR IMAGEM STRING COMO FUNDO NO CONTAINER STRING .)
 

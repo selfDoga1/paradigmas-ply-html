@@ -1,9 +1,9 @@
 def gerar_arquivos(html_output, css_output):
     with open('output/output.html', 'w') as html_file:
-        html_file.write('<!DOCTYPE html>\n<html>\n<head>\n<link rel="stylesheet" href="style.css">\n</head>\n')
+        html_file.write('''<!DOCTYPE html><html lang="pt-br"><head><link rel="stylesheet" href="style.css"><meta charset="UTF-8"><title>paradigmas ply html</title></head>''')
         html_file.write('\n'.join(html_output))
         if '<body>' in html_output:
-            html_file.write('\n</body>\n</html>')
+            html_file.write('</body></html>')
 
     with open('output/style.css', 'w') as css_file:
         css_file.write('\n'.join(css_output))
@@ -24,3 +24,6 @@ def gerar_lista_html(titulo, items, tipo_lista="ul"):
     items_html = ''.join([f'\n\t\t<li>{li}</li>' for li in items]) + '\n'
     lista_tag = "ul" if tipo_lista == "ul" else "ol"  # Determina se é <ul> ou <ol>
     return f"""<div>\n\t<h1 id="{convert_to_id(titulo)}">{titulo}</h1>\n\t<{lista_tag}>{items_html}\t</{lista_tag}>\n<div>"""
+
+def formated_text(text, tabs=0):
+    return "\t" * tabs + text.strip()
